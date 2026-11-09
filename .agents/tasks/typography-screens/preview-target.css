@@ -1,0 +1,18 @@
+/*
+ * ROUGH PREVIEW of the planned type system, injected over the CURRENT code by capture.mjs:
+ *
+ *   node .agents/tasks/typography-screens/capture.mjs preview --only home-hero,menu-grid --viewports 1440,390 ^
+ *     --inject-link "https://fonts.googleapis.com/css2?family=Montserrat:wght@500..800&family=Source+Sans+3:wght@400..700&display=swap" ^
+ *     --inject-css .agents/tasks/typography-screens/preview-target.css
+ *
+ * It is NOT the implementation (that lives in src/index.css and the component classes). It only maps the old classes onto the new
+ * families so the look can be judged before any source is edited. It does not fix sizes, weights, wrapping or overflow.
+ */
+html, body { font-family: 'Source Sans 3', system-ui, sans-serif !important; }
+h1, h2, h3, h4, h5, h6, button, th, .font-serif, .font-mono { font-family: 'Montserrat', system-ui, sans-serif !important; }
+.font-mono { font-variant-numeric: tabular-nums; }
+input, select, textarea { font-family: 'Source Sans 3', system-ui, sans-serif !important; font-size: 1rem !important; }
+@media (min-width: 640px) { input, select, textarea { font-size: 0.875rem !important; } }
+h1 { font-weight: 800 !important; letter-spacing: -0.02em; }
+h2, h3 { font-weight: 700 !important; }
+.text-\[10px\], .text-\[11px\] { font-size: 0.75rem !important; }

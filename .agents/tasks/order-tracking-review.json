@@ -1,0 +1,17 @@
+{
+  "verdict": "APPROVED",
+  "findings": [
+    "Confirmed-step skip: `pending_confirmation -> preparing` is allowed, which the requested chain does not list (confirmed). Keep it if staff confirm and start cooking together, otherwise remove `'preparing'` from the `pending_confirmation` row of `PICKUP_TRANSITIONS` and update the three test files that assert it (non-blocking, owner decision).",
+    "Limit versus polling: 60 requests a minute equals ten visible tracker pages per client address, so customers on one cafe Wi-Fi or carrier NAT can start getting 429 (arithmetic confirmed, impact possible). Raise the cap or poll every 15 to 20 seconds, accepting faster scanning of order numbers (non-blocking).",
+    "Limiter scope: counters are per process, and where `VERCEL` is unset every client shares `req.ip`, so behind a reverse proxy without `trust proxy` all customers share one bucket (confirmed, disclosed by the author). Set `trust proxy` if hosting off Vercel and say so in `DEPLOYMENT.md` (non-blocking).",
+    "Order-number enumeration: the public route reveals which of about 900,000 time-derived numbers exist and the stage of takeaway orders, about ten days per address at the current cap (confirmed, no personal data). Plan longer random references as a follow-up in order creation (non-blocking).",
+    "No audit trail: a status change stores `updated_at` but not who made it (confirmed). If accountability matters, add an `updated_by` column in a new migration and extend the 0003 allow-list (non-blocking).",
+    "Postgres path not run on Supabase: verified only on PGlite as the `postgres` role (confirmed). After applying the migrations to staging, place a takeaway order, change its status in the staff panel and watch the tracker (non-blocking).",
+    "Untested client failure paths and browsers: no component tests; the browser run skipped network error, 429, 500, the 15-second timeout, unmount cleanup and disabled-while-saving, and used headless Chrome only (confirmed gap). Add one failing-fetch scenario and open the page once on a real phone (non-blocking).",
+    "Evidence only in the temp folder: raw `tsc`, test, build and mutation outputs sit in `%TEMP%/natkhat-tracking` and the report does not cite them (confirmed). Copy `final-*-output.txt` and `mutation-report.txt` into `.agents/tasks/` and link them (non-blocking).",
+    "Staging contact: a throwaway server ran against the staging project for about four minutes: two failed reads (`42P01`), one login call, nothing written (confirmed from the author's disclosure). Check the Supabase Auth log for one failed `admin@natkhatcafe.com` sign-in around 11:03 to 11:07 IST, and start local servers with `USE_LOCAL_SQLITE=true` while `local.env` holds real values (non-blocking).",
+    "401 sign-out scope: only the status action signs out on 401, the other admin actions fail silently (confirmed). Supabase tokens expire after an hour by default and the app keeps no refresh token, so staff will hit this often (likely). Decide whether to extend the handling to the rest (non-blocking).",
+    "Accessibility details: the polite live region re-announces \"Last checked\" on every poll, and the status dialog neither traps nor restores focus (likely). Limit `aria-live` to the status banner and return focus to the \"Update status\" button on close (non-blocking)."
+  ],
+  "reviewDoc": "c:/Users/yashs/Downloads/natkhat-café/.agents/tasks/order-tracking-review.md"
+}

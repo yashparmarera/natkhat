@@ -20,6 +20,7 @@
  * --allow "A,B"   font families (as the browser reports them) that may render text.
  *                 Default: Montserrat,Source Sans 3
  * --no-audit      screenshots only
+ * --inject-link URL / --inject-css FILE   preview a candidate type system on the CURRENT code (no source edits)
  * --verbose       phase timing
  *
  * The real backend is never touched: every /api/* call is answered by an in-script fixture, and the admin session is a
@@ -44,7 +45,7 @@ const opt = (name, fallback) => {
   const i = argv.indexOf(name);
   return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : fallback;
 };
-const VALUE_OPTS = new Set(['--base', '--only', '--viewports', '--allow']);
+const VALUE_OPTS = new Set(['--base', '--only', '--viewports', '--allow', '--inject-link', '--inject-css']);
 const positional = [];
 for (let i = 0; i < argv.length; i++) {
   if (VALUE_OPTS.has(argv[i])) { i++; continue; }
@@ -63,6 +64,9 @@ const OUT_DIR = resolveDir(label);
 const BASE = opt('--base', process.env.CAPTURE_BASE_URL || 'http://127.0.0.1:5199').replace(/\/$/, '');
 const ONLY = opt('--only', '') ? opt('--only', '').split(',').map((s) => s.trim()).filter(Boolean) : null;
 const VIEWPORT_WIDTHS = opt('--viewports', '1440,390').split(',').map((s) => Number(s.trim())).filter(Boolean);
+// Preview a candidate type system WITHOUT editing the source: a stylesheet URL and/or a CSS file injected after load.
+const INJECT_LINK = opt('--inject-link', '');
+const INJECT_CSS = opt('--inject-css', '') ? fs.readFileSync(path.resolve(opt('--inject-css', '')), 'utf8') : '';
 const STRICT = flag('--strict');
 const AUDIT = !flag('--no-audit');
 const VERBOSE = flag('--verbose');
@@ -441,7 +445,8 @@ function judge(audit) {
     }
   }
   for (const [k, n] of Object.entries(audit.platformFonts)) {
-    if (/\(system\)/.test(k) && !SYMBOL_RE.test(k) && !(codeScene && MONO_RE.test(k)) && !(DEVA_RE.test(k) && audit.devanagari > 0)) {
+    // Up to 6 glyphs per scene are tolerated: the web fonts have no arrow (U+2190, "← Back to Basket") and the system paints it.
+    if (/\(system\)/.test(k) && n > 6 && !SYMBOL_RE.test(k) && !(codeScene && MONO_RE.test(k)) && !(DEVA_RE.test(k) && audit.devanagari > 0)) {
       v.push(`system font painted ${n} glyph(s): ${k}`);
     }
   }
@@ -551,6 +556,8 @@ async function main() {
           await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
           await page.addStyleTag({ content: FREEZE_CSS });
           await page.waitForSelector('header', { timeout: 20000 });
+          if (INJECT_LINK) await page.addStyleTag({ url: INJECT_LINK });
+          if (INJECT_CSS) { await page.addStyleTag({ content: INJECT_CSS }); await page.waitForTimeout(700); }
           await settle(page, 400);
           tick('run');
           await scene.run(page, vp);
