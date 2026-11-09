@@ -39,9 +39,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="text-left group cursor-pointer focus-visible:outline-hidden"
           aria-label="Natkhat Café Home"
         >
-          <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-[#234C35] whitespace-nowrap shrink-0 block">
-            {settings.cafeName}
-          </span>
+          <img
+            src="/images/logo.png"
+            alt={settings.cafeName}
+            className="h-12 md:h-14 w-auto object-contain whitespace-nowrap shrink-0 block"
+          />
         </button>
 
         {/* Zone 2: Clean 4–5 single-line navigation links */}
