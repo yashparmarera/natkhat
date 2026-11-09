@@ -1,0 +1,46 @@
+PASS  Hero shows a "Track order" button
+PASS  Hero no longer has "Bulk & Office Catering"
+PASS  Hero button keeps the original styling classes  -> px-5 py-3.5 bg-white hover:bg-[#F7F1E4]/70 border border-[#234C35]/20 text-[#234C35] text-base font-medium rounded-xl shadow-xs transition-colors flex items-center gap-2 cursor-pointer
+PASS  Hero button has an icon
+PASS  Bulk view stays reachable (nav, footer, teaser)
+PASS  Hero button opens the Track order view
+PASS  Invalid format shows inline error and makes no API call
+PASS  Input is upper-cased as you type  -> NC-000000
+PASS  Unknown order shows a friendly not-found message and made one API call  -> 1 /track request(s)
+PASS  New takeaway order reads "Order received" and waits for WhatsApp confirmation
+PASS  Page never claims the order is confirmed before staff confirm
+PASS  Page shows a last-checked time and the auto-update note
+PASS  Staff "confirmed" appears without clicking anything (auto-refresh)  -> 9s
+PASS  Staff "preparing" shows "Preparing your order" for the customer
+PASS  Staff "ready_for_pickup" shows "Ready for takeaway" for the customer
+PASS  Staff "completed" shows "Collected" for the customer
+PASS  Collected order stops advertising auto-updates and shows no Refresh-needed hint
+PASS  Polling stops once the order is collected (no requests for 22s)  -> 6 -> 6
+PASS  Delivery order shows the takeaway-only message and no status
+PASS  Cancelled takeaway order shows "Order cancelled"
+PASS  Mobile (390px): no horizontal overflow on the Track view
+PASS  Cart success screen still shows the order number and WhatsApp wording
+PASS  Takeaway success screen offers "Track this order"
+PASS  "Track this order" closes the drawer and opens Track order prefilled and already tracking  -> NC-567490
+PASS  Re-opening the cart after tracking still offers the WhatsApp resend (drawer state unchanged)
+PASS  Delivery success screen has no "Track this order" action
+PASS  Orders tab: card shows the status badge and an "Update status" button
+PASS  Keyboard focus moves into the popup when it opens
+PASS  Escape closes the popup without changing the order
+PASS  Popup shows order number, type, current status and only the valid next options
+PASS  Choosing "Preparing your order" closes the popup and updates the badge
+PASS  The customer tracker now reports "preparing"
+PASS  After preparing: next options are "Ready for takeaway" and "Cancel order"
+PASS  Cancel needs an extra confirm click (nothing changed yet)
+PASS  "Ready for takeaway" reaches the customer tracker
+PASS  "Mark as collected" completes the order
+PASS  A collected order offers no further options
+PASS  Delivery popup offers only confirm / cancel and explains why
+PASS  Server error is shown in the popup (order already confirmed)  -> This order is already "Order confirmed".
+PASS  Popup options refreshed to the real current status
+PASS  Mobile (390px): popup does not overflow horizontally
+PASS  401 sends staff back to sign-in with a clear message
+PASS  The rejected request changed nothing
+PASS  No uncaught page errors / console errors
+
+44/44 checks passed

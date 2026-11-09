@@ -1,0 +1,6 @@
+{
+  "name": "Natkhat Café",
+  "description": "Production-ready mobile-first ordering website and WhatsApp order handoff for Natkhat Café.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

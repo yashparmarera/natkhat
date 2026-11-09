@@ -1,0 +1,10 @@
+node_modules
+data
+*.db
+local.env
+.env*
+!.env.example
+.agents
+.aistudio
+test
+dist

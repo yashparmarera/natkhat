@@ -1,0 +1,1115 @@
+{
+  "label": "before-responsive",
+  "base": "http://127.0.0.1:5199",
+  "startedAt": "2026-11-09T06:29:56.180Z",
+  "viewports": [
+    1280,
+    1024,
+    768,
+    360
+  ],
+  "scenes": [
+    {
+      "id": "home-hero",
+      "viewport": 1280,
+      "file": "home-hero@1280.png",
+      "ok": true,
+      "violations": 32
+    },
+    {
+      "id": "menu-grid",
+      "viewport": 1280,
+      "file": "menu-grid@1280.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "category-nav",
+      "viewport": 1280,
+      "file": "category-nav@1280.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "card-longname",
+      "viewport": 1280,
+      "file": "card-longname@1280.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "navbar-cart-filled",
+      "viewport": 1280,
+      "file": "navbar-cart-filled@1280.png",
+      "ok": true,
+      "violations": 25
+    },
+    {
+      "id": "product-modal",
+      "viewport": 1280,
+      "file": "product-modal@1280.png",
+      "ok": true,
+      "violations": 28
+    },
+    {
+      "id": "home-hero",
+      "viewport": 1024,
+      "file": "home-hero@1024.png",
+      "ok": true,
+      "violations": 32
+    },
+    {
+      "id": "menu-grid",
+      "viewport": 1024,
+      "file": "menu-grid@1024.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "category-nav",
+      "viewport": 1024,
+      "file": "category-nav@1024.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "card-longname",
+      "viewport": 1024,
+      "file": "card-longname@1024.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "navbar-cart-filled",
+      "viewport": 1024,
+      "file": "navbar-cart-filled@1024.png",
+      "ok": true,
+      "violations": 25
+    },
+    {
+      "id": "product-modal",
+      "viewport": 1024,
+      "file": "product-modal@1024.png",
+      "ok": true,
+      "violations": 28
+    },
+    {
+      "id": "home-hero",
+      "viewport": 768,
+      "file": "home-hero@768.png",
+      "ok": true,
+      "violations": 32
+    },
+    {
+      "id": "menu-grid",
+      "viewport": 768,
+      "file": "menu-grid@768.png",
+      "ok": true,
+      "violations": 24
+    },
+    {
+      "id": "category-nav",
+      "viewport": 768,
+      "file": "category-nav@768.png",
+      "ok": true,
+      "violations": 24
+    },
+    {
+      "id": "card-longname",
+      "viewport": 768,
+      "file": "card-longname@768.png",
+      "ok": true,
+      "violations": 24
+    },
+    {
+      "id": "navbar-cart-filled",
+      "viewport": 768,
+      "file": "navbar-cart-filled@768.png",
+      "ok": true,
+      "violations": 26
+    },
+    {
+      "id": "product-modal",
+      "viewport": 768,
+      "file": "product-modal@768.png",
+      "ok": true,
+      "violations": 29
+    },
+    {
+      "id": "home-hero",
+      "viewport": 360,
+      "file": "home-hero@360.png",
+      "ok": true,
+      "violations": 28
+    },
+    {
+      "id": "menu-grid",
+      "viewport": 360,
+      "file": "menu-grid@360.png",
+      "ok": true,
+      "violations": 22
+    },
+    {
+      "id": "category-nav",
+      "viewport": 360,
+      "file": "category-nav@360.png",
+      "ok": true,
+      "violations": 22
+    },
+    {
+      "id": "card-longname",
+      "viewport": 360,
+      "file": "card-longname@360.png",
+      "ok": true,
+      "violations": 22
+    },
+    {
+      "id": "navbar-cart-filled",
+      "viewport": 360,
+      "file": "navbar-cart-filled@360.png",
+      "ok": true,
+      "violations": 23
+    },
+    {
+      "id": "product-modal",
+      "viewport": 360,
+      "file": "product-modal@360.png",
+      "ok": true,
+      "violations": 28
+    }
+  ],
+  "fontRequests": [
+    {
+      "scene": "home-hero",
+      "viewport": 1280,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1280,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 14580
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/l/font?kit=nuFcD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebuiLbRiIwYe6tDkqUPez5cLvh&skey=f3b68f0152604ed9&v=v40",
+      "status": 200,
+      "bytes": 37616
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/l/font?kit=LDIWaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU6vQTckyDQbQcCl6BIHv2_RNg&skey=ca4b9e62a7d41df5&v=v12",
+      "status": 200,
+      "bytes": 30728
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/l/font?kit=nuFcD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebuiLbRiIwYe6tDkqUPez5frvh&skey=f3b68f0152604ed9&v=v40",
+      "status": 200,
+      "bytes": 48032
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/l/font?kit=LDIWaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU6vQTckyDQbQcCl6BIHv2HRNg&skey=ca4b9e62a7d41df5&v=v12",
+      "status": 200,
+      "bytes": 21712
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1280,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1280,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1280,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1280,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1280,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1024,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1024,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1024,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1024,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1024,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1024,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 1024,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 768,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 768,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 768,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 768,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 768,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 768,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 768,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 360,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "home-hero",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 360,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 14580
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/l/font?kit=nuFcD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebuiLbRiIwYe6tDkqUPez5cLvh&skey=f3b68f0152604ed9&v=v40",
+      "status": 200,
+      "bytes": 37616
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/l/font?kit=LDIWaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU6vQTckyDQbQcCl6BIHv2_RNg&skey=ca4b9e62a7d41df5&v=v12",
+      "status": 200,
+      "bytes": 30728
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/l/font?kit=nuFcD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebuiLbRiIwYe6tDkqUPez5frvh&skey=f3b68f0152604ed9&v=v40",
+      "status": 200,
+      "bytes": 48032
+    },
+    {
+      "scene": "menu-grid",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/l/font?kit=LDIWaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU6vQTckyDQbQcCl6BIHv2HRNg&skey=ca4b9e62a7d41df5&v=v12",
+      "status": 200,
+      "bytes": 21712
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 360,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "category-nav",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 360,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "card-longname",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 360,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    },
+    {
+      "scene": "navbar-cart-filled",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 360,
+      "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap",
+      "status": 200,
+      "bytes": 13357
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "status": 200,
+      "bytes": 38404
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2",
+      "status": 200,
+      "bytes": 21140
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2",
+      "status": 200,
+      "bytes": 21728
+    },
+    {
+      "scene": "product-modal",
+      "viewport": 360,
+      "url": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2",
+      "status": 200,
+      "bytes": 27348
+    }
+  ],
+  "consoleProblems": [],
+  "finishedAt": "2026-11-09T06:31:46.206Z",
+  "fontBytesPerScene": {
+    "home-hero@1280": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "category-nav@1280": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "card-longname@1280": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "navbar-cart-filled@1280": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "product-modal@1280": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "home-hero@1024": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "menu-grid@1024": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "category-nav@1024": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "card-longname@1024": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "navbar-cart-filled@1024": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "product-modal@1024": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "home-hero@768": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "menu-grid@768": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "category-nav@768": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "card-longname@768": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "navbar-cart-filled@768": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "product-modal@768": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "home-hero@360": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "category-nav@360": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "card-longname@360": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "navbar-cart-filled@360": {
+      "files": 4,
+      "bytes": 108620
+    },
+    "product-modal@360": {
+      "files": 4,
+      "bytes": 108620
+    }
+  }
+}
