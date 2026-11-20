@@ -1,5 +1,3 @@
-import { validateTransition } from '../../src/utils/orderStatus';
-
 function clean(value: string | undefined): string {
   return (value || '').trim();
 }
@@ -55,6 +53,40 @@ async function verifyStaff(req: any): Promise<boolean> {
   return Boolean(profile?.is_active && ['admin', 'manager', 'staff'].includes(profile.role));
 }
 
+function validateStatusTransition(orderType: string, current: string, next: unknown):
+  { ok: true } | { ok: false; message: string } {
+  const statuses = [
+    'pending_confirmation',
+    'confirmed',
+    'preparing',
+    'out_for_delivery',
+    'ready_for_pickup',
+    'completed',
+    'cancelled',
+  ];
+  if (typeof next !== 'string' || !statuses.includes(next)) {
+    return { ok: false, message: 'Unknown status.' };
+  }
+  if (current === 'completed' || current === 'cancelled') {
+    return { ok: false, message: 'Terminal statuses cannot be changed.' };
+  }
+  if (next === 'cancelled') return { ok: true };
+  if (orderType === 'pickup') {
+    const allowed: Record<string, string[]> = {
+      pending_confirmation: ['confirmed', 'preparing'],
+      confirmed: ['preparing'],
+      preparing: ['ready_for_pickup'],
+      ready_for_pickup: ['completed'],
+    };
+    return allowed[current]?.includes(next)
+      ? { ok: true }
+      : { ok: false, message: `Invalid status transition from ${current}.` };
+  }
+  return current === 'pending_confirmation' && next === 'confirmed'
+    ? { ok: true }
+    : { ok: false, message: `Invalid status transition from ${current}.` };
+}
+
 export default async function status(req: any, res: any) {
   if (req.method !== 'PATCH') {
     res.statusCode = 405;
@@ -96,7 +128,7 @@ export default async function status(req: any, res: any) {
       return;
     }
     const row = rows[0];
-    const transition = validateTransition(row.order_type, row.status, nextStatus);
+    const transition = validateStatusTransition(row.order_type, row.status, nextStatus);
     if (!transition.ok) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
