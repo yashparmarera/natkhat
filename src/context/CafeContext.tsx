@@ -267,7 +267,13 @@ export const CafeProvider: React.FC<{ children: React.ReactNode }> = ({ children
         body: JSON.stringify({ username, password }),
       });
 
-      const data = await res.json();
+      const rawBody = await res.text();
+      let data: any = null;
+      try {
+        data = rawBody ? JSON.parse(rawBody) : null;
+      } catch {
+        data = null;
+      }
       if (!res.ok) {
         return { success: false, error: data.error || 'Invalid credentials' };
       }
