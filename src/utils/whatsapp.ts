@@ -37,7 +37,9 @@ export function generateWhatsAppOrderMessage(params: WhatsAppOrderMessageParams)
     totalPaise,
   } = params;
 
-  const orderTypeLabel = customer.orderType === 'delivery' ? '🛵 Home Delivery' : '🥡 Takeaway / Pickup';
+  const orderTypeLabel = customer.orderType === 'delivery'
+    ? '\u{1F6F5} Home Delivery'
+    : '\u{1F961} Takeaway / Pickup';
 
   const itemLines = items.map((item, index) => {
     const itemTotal = item.product.pricePaise * item.quantity;
@@ -46,15 +48,15 @@ export function generateWhatsAppOrderMessage(params: WhatsAppOrderMessageParams)
 
   let addressBlock = '';
   if (customer.orderType === 'delivery') {
-    addressBlock = `\n📍 *Delivery Address:* ${customer.address || 'Not specified'}`;
+    addressBlock = `\n\u{1F4CD} *Delivery Address:* ${customer.address || 'Not specified'}`;
     if (customer.landmark && customer.landmark.trim()) {
-      addressBlock += `\n📌 *Landmark:* ${customer.landmark.trim()}`;
+      addressBlock += `\n\u{1F4CC} *Landmark:* ${customer.landmark.trim()}`;
     }
   }
 
   let instructionsBlock = '';
   if (customer.instructions && customer.instructions.trim()) {
-    instructionsBlock = `\n📝 *Special Instructions:* ${customer.instructions.trim()}`;
+    instructionsBlock = `\n\u{1F4DD} *Special Instructions:* ${customer.instructions.trim()}`;
   }
 
   let deliveryFeeLine = '';
@@ -65,23 +67,23 @@ export function generateWhatsAppOrderMessage(params: WhatsAppOrderMessageParams)
   }
 
   const message = 
-`👋 Hello *${cafeName}*!
+`\u{1F44B} Hello *${cafeName}*!
 I would like to place an order.
 
-🧾 *Order Ref:* #${referenceId}
-👤 *Customer Name:* ${customer.name}
-📞 *Contact Phone:* ${customer.phone}
-📦 *Order Type:* ${orderTypeLabel}
+\u{1F9FE} *Order Ref:* #${referenceId}
+\u{1F464} *Customer Name:* ${customer.name}
+\u{1F4DE} *Contact Phone:* ${customer.phone}
+\u{1F4E6} *Order Type:* ${orderTypeLabel}
 ${addressBlock}${instructionsBlock}
 
-📋 *ORDER ITEMS:*
+\u{1F4CB} *ORDER ITEMS:*
 ${itemLines}
 
-💰 *BILL SUMMARY:*
+\u{1F4B0} *BILL SUMMARY:*
 • Items Subtotal: ${formatINRPlain(subtotalPaise)}${deliveryFeeLine}
 *TOTAL PAYABLE:* ${formatINRPlain(totalPaise)}
 
-⏳ *Please confirm availability and estimated preparation time.*
+\u{23F3} *Please confirm availability and estimated preparation time.*
 Thank you!`;
 
   return message;
@@ -104,18 +106,18 @@ export function buildWhatsAppOrderUrl(
  */
 export function generateBulkEnquiryMessage(cafeName: string, enquiry: BulkEnquiry): string {
   const message = 
-`👋 Hello *${cafeName}* Team!
+`\u{1F44B} Hello *${cafeName}* Team!
 I would like to enquire about a *Bulk Food Order / Catering*.
 
-👤 *Name:* ${enquiry.name}
-📞 *Phone:* ${enquiry.phone}
-🏢 *Organization / Occasion:* ${enquiry.companyOrGroup || 'Personal / Family Gathering'}
-🎉 *Event Type:* ${enquiry.eventType}
-👥 *Estimated Guests:* ${enquiry.estimatedPeople} People
-📅 *Preferred Date:* ${enquiry.preferredDate}
-⏰ *Preferred Time:* ${enquiry.preferredTime}
-🥗 *Dietary Preferences:* ${enquiry.dietaryRequirements || 'Standard Café Menu'}
-${enquiry.notes ? `\n📝 *Details / Requirements:* ${enquiry.notes}` : ''}
+\u{1F464} *Name:* ${enquiry.name}
+\u{1F4DE} *Phone:* ${enquiry.phone}
+\u{1F3E2} *Organization / Occasion:* ${enquiry.companyOrGroup || 'Personal / Family Gathering'}
+\u{1F389} *Event Type:* ${enquiry.eventType}
+\u{1F465} *Estimated Guests:* ${enquiry.estimatedPeople} People
+\u{1F4C5} *Preferred Date:* ${enquiry.preferredDate}
+\u{23F0} *Preferred Time:* ${enquiry.preferredTime}
+\u{1F957} *Dietary Preferences:* ${enquiry.dietaryRequirements || 'Standard Café Menu'}
+${enquiry.notes ? `\n\u{1F4DD} *Details / Requirements:* ${enquiry.notes}` : ''}
 
 Please let me know package pricing and availability. Thank you!`;
 

@@ -29,6 +29,26 @@ test('sanitizeWhatsAppNumber properly handles formatting and adds 91 when 10 dig
   assert.equal(sanitizeWhatsAppNumber('917042653174'), '917042653174');
 });
 
+test('generateWhatsAppOrderMessage uses valid Unicode emoji', () => {
+  const message = generateWhatsAppOrderMessage({
+    cafeName: 'Natkhat Café',
+    referenceId: 'NC-123456',
+    customer: {
+      name: 'Test Customer',
+      phone: '7042653174',
+      orderType: 'delivery',
+      address: 'Test Address',
+    },
+    items: [{ product: mockProduct, quantity: 1 }],
+    subtotalPaise: 1000,
+    deliveryFeePaise: 3000,
+    totalPaise: 4000,
+  });
+  assert.doesNotMatch(message, /�/);
+  assert.match(message, /\u{1F44B}/u);
+  assert.match(message, /\u{1F6F5}/u);
+});
+
 test('generateWhatsAppOrderMessage formats complete order details and instructions', () => {
   const customer: CustomerDetails = {
     name: 'Aarav Sharma',

@@ -49,16 +49,16 @@ function generateWhatsAppMessage(
     .map((item, index) => `${index + 1}. *${item.product.name}* x ${item.quantity} — ${formatPrice(item.product.pricePaise * item.quantity)}`)
     .join('\n');
   const address = customer.orderType === 'delivery'
-    ? `\n📍 *Delivery Address:* ${customer.address || 'Not specified'}${customer.landmark ? `\n📌 *Landmark:* ${customer.landmark}` : ''}`
+    ? `\n\u{1F4CD} *Delivery Address:* ${customer.address || 'Not specified'}${customer.landmark ? `\n\u{1F4CC} *Landmark:* ${customer.landmark}` : ''}`
     : '';
-  const instructions = customer.instructions ? `\n📝 *Special Instructions:* ${customer.instructions}` : '';
+  const instructions = customer.instructions ? `\n\u{1F4DD} *Special Instructions:* ${customer.instructions}` : '';
   const deliveryLine = customer.orderType === 'delivery'
     ? deliveryFeePaise > 0
       ? `\n• Delivery Charge: ${formatPrice(deliveryFeePaise)}`
       : '\n• Delivery Charge: FREE'
     : '';
 
-  return `👋 Hello *${cafeName}*!\nI would like to place an order.\n\n🧾 *Order Ref:* #${referenceId}\n👤 *Customer Name:* ${customer.name}\n📞 *Contact Phone:* ${customer.phone}\n📦 *Order Type:* ${customer.orderType === 'delivery' ? '🛵 Home Delivery' : '🥡 Takeaway / Pickup'}${address}${instructions}\n\n📋 *ORDER ITEMS:*\n${itemLines}\n\n💰 *BILL SUMMARY:*\n• Items Subtotal: ${formatPrice(subtotalPaise)}${deliveryLine}\n*TOTAL PAYABLE:* ${formatPrice(totalPaise)}\n\n⏳ *Please confirm availability and estimated preparation time.*\nThank you!`;
+  return `\u{1F44B} Hello *${cafeName}*!\nI would like to place an order.\n\n\u{1F9FE} *Order Ref:* #${referenceId}\n\u{1F464} *Customer Name:* ${customer.name}\n\u{1F4DE} *Contact Phone:* ${customer.phone}\n\u{1F4E6} *Order Type:* ${customer.orderType === 'delivery' ? '\u{1F6F5} Home Delivery' : '\u{1F961} Takeaway / Pickup'}${address}${instructions}\n\n\u{1F4CB} *ORDER ITEMS:*\n${itemLines}\n\n\u{1F4B0} *BILL SUMMARY:*\n• Items Subtotal: ${formatPrice(subtotalPaise)}${deliveryLine}\n*TOTAL PAYABLE:* ${formatPrice(totalPaise)}\n\n\u{23F3} *Please confirm availability and estimated preparation time.*\nThank you!`;
 }
 
 export default async function orders(req: any, res: any) {
