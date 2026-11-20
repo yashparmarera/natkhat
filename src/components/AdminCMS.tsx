@@ -69,7 +69,7 @@ export const AdminCMS: React.FC = () => {
   const [newProdPriceRupees, setNewProdPriceRupees] = useState<number>(60);
   const [newProdDesc, setNewProdDesc] = useState('');
   const [newProdPortion, setNewProdPortion] = useState('Serves 1');
-  const [newProdImage, setNewProdImage] = useState('/src/assets/images/natkhat_hero_feast_1793454950947.jpg');
+  const [newProdImage, setNewProdImage] = useState('/images/natkhat_hero_feast_1793454950947.jpg');
   const [newProdFeatured, setNewProdFeatured] = useState(false);
 
   // Settings form state

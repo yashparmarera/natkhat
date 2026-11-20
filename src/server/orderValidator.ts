@@ -97,7 +97,7 @@ export async function validateAndCreateOrder(payload: SubmitOrderPayload): Promi
             categoryId: productRow.categoryId,
             categoryName: productRow.categoryName || '',
             dietary: (productRow.dietary as any) || 'veg',
-            image: productRow.image || '/src/assets/images/natkhat_hero_feast_1793454950947.jpg',
+            image: productRow.image || '/images/natkhat_hero_feast_1793454950947.jpg',
             isAvailable: productRow.isAvailable,
             isFeatured: productRow.isFeatured,
             displayOrder: productRow.displayOrder,

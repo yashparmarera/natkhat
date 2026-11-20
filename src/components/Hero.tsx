@@ -74,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onOpenTrack }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 group">
               <img
-                src="/src/assets/images/natkhat_hero_feast_1793454950947.jpg"
+                src="/images/natkhat_hero_feast_1793454950947.jpg"
                 alt="Authentic spread of Kulhad Chai, hot stuffed parathas, samosas and chutneys at Natkhat Café"
                 className="w-full h-full object-cover transform group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
