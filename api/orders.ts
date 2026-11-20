@@ -1,4 +1,5 @@
 import { getMissingConfig } from '../src/server/config';
+import { validateAndCreateOrder } from '../src/server/orderValidator';
 
 export default async function orders(req: any, res: any) {
   if (req.method !== 'POST') {
@@ -18,7 +19,6 @@ export default async function orders(req: any, res: any) {
   }
 
   try {
-    const { validateAndCreateOrder } = await import('../src/server/orderValidator');
     let payload = req.body;
     if (typeof payload === 'string') {
       payload = JSON.parse(payload);
