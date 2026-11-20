@@ -14,6 +14,18 @@ export default async function handler(req: any, res: any) {
     res.end(JSON.stringify({ error: 'Service misconfigured' }));
     return;
   }
-  appPromise ??= import('../src/server/app');
-  return (await appPromise).app(req, res);
+  try {
+    appPromise ??= import('../src/server/app');
+    return (await appPromise).app(req, res);
+  } catch (err: any) {
+    const detail = err instanceof Error ? err.message : 'Unknown API initialization failure';
+    console.error(`[Natkhat Cafe] API initialization failed: ${detail}`);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Cache-Control', 'no-store');
+    res.end(JSON.stringify({
+      error: 'API initialization failed',
+      detail,
+    }));
+  }
 }
