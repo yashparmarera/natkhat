@@ -62,6 +62,48 @@ function generateWhatsAppMessage(
 }
 
 export default async function orders(req: any, res: any) {
+  if (req.method === 'GET') {
+    try {
+      const authorized = await verifyStaff(req);
+      if (!authorized) {
+        res.statusCode = 401;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ error: 'Unauthorized: Authentication token required' }));
+        return;
+      }
+      const rows = await supabaseRequest(
+        '/orders?select=reference_id,customer_name,customer_phone,order_type,address,landmark,instructions,subtotal_paise,delivery_fee_paise,total_paise,status,items_json,created_at&order=created_at.desc'
+      );
+      const formatted = (Array.isArray(rows) ? rows : []).map((row: any) => ({
+        referenceId: row.reference_id,
+        customer: {
+          name: row.customer_name,
+          phone: row.customer_phone,
+          orderType: row.order_type,
+          address: row.address || undefined,
+          landmark: row.landmark || undefined,
+          instructions: row.instructions || undefined,
+        },
+        subtotalPaise: Number(row.subtotal_paise),
+        deliveryFeePaise: Number(row.delivery_fee_paise),
+        totalPaise: Number(row.total_paise),
+        status: row.status,
+        createdAt: row.created_at,
+        items: row.items_json,
+      }));
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify(formatted));
+      return;
+    } catch (error) {
+      console.error('[Natkhat Cafe] Staff order list failed:', error instanceof Error ? error.message : 'Unknown error');
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Failed to retrieve orders' }));
+      return;
+    }
+  }
+
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -222,4 +264,41 @@ function cryptoRandomId(): string {
     bytes[0] = Math.floor(Math.random() * 0xffffffff);
   }
   return bytes[0].toString(16).padStart(8, '0');
+}
+
+async function verifyStaff(req: any): Promise<boolean> {
+  const authorization = req.headers?.authorization;
+  const token = typeof authorization === 'string' && authorization.startsWith('Bearer ')
+    ? authorization.slice(7).trim()
+    : '';
+  if (!token) return false;
+
+  const supabaseUrl =
+    clean(process.env.SUPABASE_URL) || clean(process.env.VITE_SUPABASE_URL);
+  const serviceKey = clean(process.env.SUPABASE_SERVICE_ROLE_KEY);
+  if (!supabaseUrl || !serviceKey) return false;
+
+  const authResponse = await fetch(`${supabaseUrl}/auth/v1/user`, {
+    headers: {
+      apikey: serviceKey,
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  if (!authResponse.ok) return false;
+  const user = await authResponse.json();
+  if (!user?.id) return false;
+
+  const profileResponse = await fetch(
+    `${supabaseUrl}/rest/v1/profiles?select=role,is_active&id=eq.${encodeURIComponent(user.id)}`,
+    {
+      headers: {
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+      },
+    }
+  );
+  if (!profileResponse.ok) return false;
+  const profiles = await profileResponse.json();
+  const profile = Array.isArray(profiles) ? profiles[0] : null;
+  return Boolean(profile?.is_active && ['admin', 'manager', 'staff'].includes(profile.role));
 }

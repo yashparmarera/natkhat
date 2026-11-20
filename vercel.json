@@ -11,6 +11,7 @@
     { "source": "/api/health", "destination": "/api/health" },
     { "source": "/api/auth/login", "destination": "/api/auth/login" },
     { "source": "/api/orders", "destination": "/api/orders" },
+    { "source": "/api/orders/(.*)/status", "destination": "/api/orders/status" },
     { "source": "/api/(.*)", "destination": "/api" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
