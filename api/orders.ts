@@ -28,7 +28,7 @@ async function supabaseRequest(path: string, options: { method?: string; body?: 
     } catch {}
     throw new Error(`Supabase ${response.status}: ${detail}`);
   }
-  if (response.status === 204) return [];
+  if (response.status === 204 || response.status === 201) return [];
   return response.json();
 }
 
