@@ -206,7 +206,11 @@ export default async function orders(req: any, res: any) {
     }
     res.statusCode = status;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: status === 500 ? message : message }));
+    res.end(JSON.stringify({
+      error: status === 500
+        ? 'Server error while validating order'
+        : message,
+    }));
   }
 }
 
