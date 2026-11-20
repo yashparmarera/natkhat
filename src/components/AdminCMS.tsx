@@ -259,14 +259,6 @@ export const AdminCMS: React.FC = () => {
             </button>
           </form>
 
-          <div className="p-3 bg-gray-50 rounded-lg text-xs text-[#242820]/70 text-left space-y-1">
-            <span className="font-semibold text-[#234C35] block">Default Master Credentials:</span>
-            <p>Username: <code className="bg-gray-200 px-1 py-0.5 rounded text-[11px]">admin</code></p>
-            <p>Password: <code className="bg-gray-200 px-1 py-0.5 rounded text-[11px]">NatkhatCafe@2026</code></p>
-            <p className="text-[10px] text-gray-500 pt-1">
-              (Master password can be changed securely in Store Settings).
-            </p>
-          </div>
         </div>
       </div>
     );
@@ -742,7 +734,7 @@ export const AdminCMS: React.FC = () => {
           <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-gray-200 space-y-4">
             <h3 className="font-serif text-lg font-bold text-[#234C35]">Update Master Password</h3>
             <p className="text-xs text-[#242820]/70">
-              Set a new secure password for the café management portal. It will be hashed with scrypt and saved in SQLite.
+              Set a new secure password for the café management portal.
             </p>
 
             <form onSubmit={handlePasswordChange} className="space-y-3 text-xs">
