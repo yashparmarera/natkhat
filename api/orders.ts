@@ -20,7 +20,13 @@ async function supabaseRequest(path: string, options: { method?: string; body?: 
     body: options.body === undefined ? undefined : JSON.stringify(options.body),
   });
   if (!response.ok) {
-    throw new Error(`Supabase request failed (${response.status})`);
+    const responseBody = await response.text();
+    let detail = responseBody;
+    try {
+      const parsed = JSON.parse(responseBody);
+      detail = parsed.message || parsed.error_description || parsed.error || responseBody;
+    } catch {}
+    throw new Error(`Supabase ${response.status}: ${detail}`);
   }
   if (response.status === 204) return [];
   return response.json();
@@ -195,9 +201,12 @@ export default async function orders(req: any, res: any) {
   } catch (err: any) {
     const status = err?.status || (String(err?.message).includes('misconfigured') ? 503 : 500);
     const message = err?.message || 'Server error while validating order';
+    if (status === 500) {
+      console.error('[Natkhat Cafe] Order API failed:', message);
+    }
     res.statusCode = status;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: status === 500 ? 'Server error while validating order' : message }));
+    res.end(JSON.stringify({ error: status === 500 ? message : message }));
   }
 }
 
