@@ -180,14 +180,25 @@ export const CafeProvider: React.FC<{ children: React.ReactNode }> = ({ children
         body: JSON.stringify(payload),
       });
 
-      const data = await res.json();
+      const rawBody = await res.text();
+      let data: any = null;
+      try {
+        data = rawBody ? JSON.parse(rawBody) : null;
+      } catch {
+        if (!res.ok) {
+          return { success: false, error: `Order service unavailable (${res.status}). Please try again.` };
+        }
+      }
       if (!res.ok) {
         return { success: false, error: data.error || 'Failed to validate order on server' };
       }
 
       return { success: true, order: data };
     } catch (err: any) {
-      return { success: false, error: 'Network connection error while submitting order' };
+      return {
+        success: false,
+        error: 'Unable to reach the order service. Please check your connection and try again.',
+      };
     }
   };
 

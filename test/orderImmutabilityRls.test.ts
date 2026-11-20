@@ -42,7 +42,7 @@ async function createDb() {
       ('${inactiveId}', 'inactive@x.com', 'Inactive', 'staff', false);
     INSERT INTO public.orders (reference_id, customer_name, customer_phone, order_type, address,
       subtotal_paise, delivery_fee_paise, total_paise, items_json)
-      VALUES ('NC-1', 'Customer', '9876543210', 'delivery', 'Addr', 25000, 0, 25000, '[]'::jsonb);
+      VALUES ('NC-1', 'Customer', '7042653174', 'delivery', 'Addr', 25000, 0, 25000, '[]'::jsonb);
     INSERT INTO public.order_items (id, order_reference_id, product_id, product_name_snapshot,
       unit_price_paise, quantity, total_paise) VALUES ('item-1', 'NC-1', 'prod', 'Kulhad Chai', 3000, 2, 6000);
   `);

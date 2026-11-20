@@ -64,7 +64,7 @@ export interface StoreSettings {
   cafeName: string;
   tagline: string;
   contactPhone: string;
-  whatsappNumber: string; // e.g. "919876543210" without spaces or '+' for wa.me
+  whatsappNumber: string; // e.g. "917042653174" without spaces or '+' for wa.me
   address: string;
   city: string;
   landmark: string;

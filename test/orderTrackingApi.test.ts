@@ -17,7 +17,7 @@ process.env.SQLITE_DB_PATH = path.join(tmpDir, 'test.db');
 process.env.USE_LOCAL_SQLITE = 'true';
 
 const PUBLIC_KEYS = ['createdAt', 'orderType', 'referenceId', 'status', 'updatedAt'];
-const PII = ['Priya Pickup', '9876543210', 'Flat 9', 'Tower', 'prod-kulhad-chai', 'prod-special-thali', 'pricePaise', 'items', 'total', 'customer'];
+const PII = ['Priya Pickup', '7042653174', 'Flat 9', 'Tower', 'prod-kulhad-chai', 'prod-special-thali', 'pricePaise', 'items', 'total', 'customer'];
 
 let server: Server;
 let base = '';
@@ -48,8 +48,8 @@ async function call(method: string, url: string, opts: { token?: string; body?: 
 async function createOrder(orderType: 'pickup' | 'delivery'): Promise<string> {
   const customer =
     orderType === 'pickup'
-      ? { name: 'Priya Pickup', phone: '9876543210', orderType }
-      : { name: 'Priya Pickup', phone: '9876543210', orderType, address: 'Flat 9, Test Tower' };
+      ? { name: 'Priya Pickup', phone: '7042653174', orderType }
+      : { name: 'Priya Pickup', phone: '7042653174', orderType, address: 'Flat 9, Test Tower' };
   const items =
     orderType === 'pickup'
       ? [{ productId: 'prod-kulhad-chai', quantity: 2 }]
@@ -344,7 +344,7 @@ test('Errors: a database failure gives a generic 500 and the log carries no requ
 
     const updated = await call('PATCH', '/api/orders/NC-123456/status', {
       token: tokens.staff,
-      body: { status: 'confirmed', note: 'SECRET-MARKER 9876543210' },
+      body: { status: 'confirmed', note: 'SECRET-MARKER 7042653174' },
     });
     assert.equal(updated.status, 500);
     assert.deepEqual(updated.json, { error: 'Failed to update order status' });
@@ -357,7 +357,7 @@ test('Errors: a database failure gives a generic 500 and the log carries no requ
   assert.match(output, /Error tracking order: .*no such table/);
   assert.match(output, /Error updating order status: .*no such table/);
   assert.ok(!output.includes('SECRET-MARKER'), 'request body must not be logged');
-  assert.ok(!output.includes('9876543210'), 'phone numbers must not be logged');
+  assert.ok(!output.includes('7042653174'), 'phone numbers must not be logged');
 });
 
 test('Status: the server never alters the SQLite schema, and uses updated_at only if the column already exists', async () => {

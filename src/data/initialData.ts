@@ -3,8 +3,8 @@ import { Category, Product, StoreSettings } from '../types/cafe';
 export const initialSettings: StoreSettings = {
   cafeName: 'Natkhat Café',
   tagline: 'Desi Flavours • Fresh Everyday • Handcrafted With Love',
-  contactPhone: '+91 98765 43210',
-  whatsappNumber: '919876543210',
+  contactPhone: '+91 70426 53174',
+  whatsappNumber: '917042653174',
   address: 'Shop 12-14, Ground Floor, Shreeram Commercial Plaza, Sector 4, Near City Metro Station',
   city: 'New Delhi / NCR',
   landmark: 'Opposite Central Park Gate 2',

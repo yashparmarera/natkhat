@@ -24,15 +24,15 @@ const mockProduct: Product = {
 };
 
 test('sanitizeWhatsAppNumber properly handles formatting and adds 91 when 10 digits given', () => {
-  assert.equal(sanitizeWhatsAppNumber('9876543210'), '919876543210');
-  assert.equal(sanitizeWhatsAppNumber('+91 98765 43210'), '919876543210');
-  assert.equal(sanitizeWhatsAppNumber('919876543210'), '919876543210');
+  assert.equal(sanitizeWhatsAppNumber('7042653174'), '917042653174');
+  assert.equal(sanitizeWhatsAppNumber('+91 70426 53174'), '917042653174');
+  assert.equal(sanitizeWhatsAppNumber('917042653174'), '917042653174');
 });
 
 test('generateWhatsAppOrderMessage formats complete order details and instructions', () => {
   const customer: CustomerDetails = {
     name: 'Aarav Sharma',
-    phone: '9876543210',
+    phone: '7042653174',
     orderType: 'delivery',
     address: 'Flat 402, Royal Residency, Sector 4',
     landmark: 'Opposite State Bank',
@@ -56,7 +56,7 @@ test('generateWhatsAppOrderMessage formats complete order details and instructio
   assert.match(message, /Natkhat Café/);
   assert.match(message, /#NC-5021/);
   assert.match(message, /Aarav Sharma/);
-  assert.match(message, /9876543210/);
+  assert.match(message, /7042653174/);
   assert.match(message, /Natkhat Special Thali/);
   assert.match(message, /₹360/);
   assert.match(message, /Royal Residency/);
@@ -75,7 +75,7 @@ test('buildWhatsAppOrderUrl generates a valid wa.me URI with encodeURIComponent'
     { product: mockProduct, quantity: 1 },
   ];
 
-  const url = buildWhatsAppOrderUrl('919876543210', {
+  const url = buildWhatsAppOrderUrl('917042653174', {
     cafeName: 'Natkhat Café',
     referenceId: 'NC-1001',
     customer,
@@ -85,7 +85,7 @@ test('buildWhatsAppOrderUrl generates a valid wa.me URI with encodeURIComponent'
     totalPaise: 18000,
   });
 
-  assert.ok(url.startsWith('https://wa.me/919876543210?text='));
+  assert.ok(url.startsWith('https://wa.me/917042653174?text='));
   assert.ok(url.includes(encodeURIComponent('Natkhat Café')));
   assert.ok(url.includes(encodeURIComponent('#NC-1001')));
 });
@@ -108,6 +108,6 @@ test('buildBulkEnquiryWhatsAppUrl formats bulk catering details', () => {
   assert.match(message, /45 People/);
   assert.match(message, /Infosys Tech Park/);
 
-  const url = buildBulkEnquiryWhatsAppUrl('9876543210', 'Natkhat Café', enquiry);
-  assert.ok(url.startsWith('https://wa.me/919876543210?text='));
+  const url = buildBulkEnquiryWhatsAppUrl('7042653174', 'Natkhat Café', enquiry);
+  assert.ok(url.startsWith('https://wa.me/917042653174?text='));
 });

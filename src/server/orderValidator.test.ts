@@ -49,7 +49,7 @@ test('Server-side order validation computes prices from database, not client', a
   const result = await validateAndCreateOrder({
     customer: {
       name: 'Rohan Sharma',
-      phone: '9876543210',
+      phone: '7042653174',
       orderType: 'delivery',
       address: 'Flat 101, Galaxy Tower, Sector 4',
     },

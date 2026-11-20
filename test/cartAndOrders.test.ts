@@ -116,7 +116,7 @@ test('WhatsApp message format contains order reference, customer, and items', ()
     referenceId: 'NC-348176',
     customer: {
       name: 'Rohan Sharma',
-      phone: '9876543210',
+      phone: '7042653174',
       orderType: 'delivery',
       address: 'Flat 101, Galaxy Tower, Sector 4',
     },
@@ -131,7 +131,7 @@ test('WhatsApp message format contains order reference, customer, and items', ()
 
   assert.match(message, /NC-348176/);
   assert.match(message, /Rohan Sharma/);
-  assert.match(message, /9876543210/);
+  assert.match(message, /7042653174/);
   assert.match(message, /Special Adrak Elaichi Kulhad Chai/);
   assert.match(message, /Natkhat Special Maharaja Thali/);
   assert.match(message, /₹250/);

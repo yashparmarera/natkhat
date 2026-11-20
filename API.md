@@ -5,7 +5,7 @@ The application communicates with WhatsApp exclusively through standard click-to
 `https://wa.me/{WHATSAPP_NUMBER}?text={ENCODED_MESSAGE}`
 
 ### Rules:
-- Number format: Strictly numeric digits with country code (e.g. `919876543210`).
+- Number format: Strictly numeric digits with country code (e.g. `917042653174`).
 - Text encoding: All message contents are encoded with standard `encodeURIComponent`.
 - No API keys, no WhatsApp Cloud API, and no webhook servers required.
 

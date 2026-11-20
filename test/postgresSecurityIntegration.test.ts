@@ -63,7 +63,7 @@ test('PostgreSQL Real Integration: Security, RLS, and Role Verification', async 
       id, cafe_name, tagline, contact_phone, whatsapp_number, address,
       opening_hours, min_order_delivery_paise, delivery_fee_paise, free_delivery_threshold_paise
     ) VALUES (
-      1, 'Natkhat Café', 'Desi Flavours', '+91 98765 43210', '919876543210',
+      1, 'Natkhat Café', 'Desi Flavours', '+91 70426 53174', '917042653174',
       'Shop 12-14, Sector 4', '8:00 AM – 10:30 PM', 10000, 3000, 25000
     );
 
@@ -91,7 +91,7 @@ test('PostgreSQL Real Integration: Security, RLS, and Role Verification', async 
       reference_id, customer_name, customer_phone, order_type,
       subtotal_paise, delivery_fee_paise, total_paise, items_json
     ) VALUES (
-      'NC-111111', 'Test Customer', '9876543210', 'delivery',
+      'NC-111111', 'Test Customer', '7042653174', 'delivery',
       25000, 0, 25000, '[]'::jsonb
     );
 
