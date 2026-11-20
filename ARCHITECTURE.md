@@ -1,7 +1,7 @@
 # System Architecture & Technical Design
 
 ## 1. Full-Stack Production Architecture
-- **Runtime & Server**: Express 4 running on Node.js 22 (`server.ts`).
+- **Runtime & Server**: Express 4 running on the Node.js version selected by the deployment environment (`server.ts`).
   - In development: mounts Vite 8 SPA middlewares directly (`"dev": "tsx server.ts"`).
   - In production: serves pre-compiled `/dist` assets while hosting the `/api` REST endpoints.
 - **Database**: Embedded SQLite database (`data/natkhat.db`) with `node:sqlite`, providing centralized persistence for store settings, categories, products, customer orders, and admin credentials.
