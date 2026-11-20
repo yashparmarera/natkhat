@@ -1,7 +1,7 @@
 # Deployment Guide (Vercel)
 
 ## Prerequisites
-- Node 26 is selected in the Vercel project settings.
+- Node 22 (`engines` in `package.json`).
 - A Supabase project with migrations applied (step 1).
 - The repo pushed to GitHub/GitLab/Bitbucket.
 
