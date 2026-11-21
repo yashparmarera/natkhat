@@ -1,0 +1,3571 @@
+{
+ "allowedFamilies": [
+  "Montserrat",
+  "Source Sans 3",
+  "Playfair Display",
+  "Plus Jakarta Sans"
+ ],
+ "failures": [
+  {
+   "scene": "home-hero",
+   "viewport": 1440,
+   "violations": [
+    "3 h1-h3 with line-height outside 1.05-1.4",
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "menu-grid",
+   "viewport": 1440,
+   "violations": [
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "cart-review",
+   "viewport": 1440,
+   "violations": [
+    "1 h1-h3 with line-height outside 1.05-1.4",
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "admin-orders",
+   "viewport": 1440,
+   "violations": [
+    "4 long paragraph(s) with line-height outside 1.45-1.8",
+    "5 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "home-hero",
+   "viewport": 390,
+   "violations": [
+    "3 h1-h3 with line-height outside 1.05-1.4",
+    "4 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "menu-grid",
+   "viewport": 390,
+   "violations": [
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "cart-review",
+   "viewport": 390,
+   "violations": [
+    "1 h1-h3 with line-height outside 1.05-1.4",
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "admin-orders",
+   "viewport": 390,
+   "violations": [
+    "4 long paragraph(s) with line-height outside 1.45-1.8",
+    "5 paragraph(s) over 50 characters set below 14px"
+   ]
+  }
+ ],
+ "audits": [
+  {
+   "scene": "home-hero",
+   "viewport": 1440,
+   "census": {
+    "Plus Jakarta Sans | 600 | 14px | normal": 21,
+    "Plus Jakarta Sans | 500 | 14px | normal": 6,
+    "Plus Jakarta Sans | 500 | 12px | normal": 2,
+    "Playfair Display | 700 | 60px | normal": 1,
+    "Plus Jakarta Sans | 400 | 18px | normal": 1,
+    "Plus Jakarta Sans | 600 | 16px | normal": 4,
+    "Plus Jakarta Sans | 400 | 12px | normal": 33,
+    "Plus Jakarta Sans | 700 | 24px | normal": 3,
+    "Playfair Display | 700 | 30px | normal": 4,
+    "Playfair Display | 700 | 16px | normal": 7,
+    "Plus Jakarta Sans | 400 | 14px | normal": 15,
+    "Plus Jakarta Sans | 600 | 12px | normal": 8,
+    "Playfair Display | 700 | 18px | normal": 11,
+    "Plus Jakarta Sans | 700 | 18px | normal": 8,
+    "Plus Jakarta Sans | 400 | 16px | normal": 5,
+    "Playfair Display | 700 | 24px | normal": 5,
+    "Plus Jakarta Sans | 700 | 12px | normal": 4
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "button.transition-colors.py-2.cursor-pointer.whitespace-nowrap \"Home\"",
+     "span.font-semibold \"Cart\""
+    ],
+    "Plus Jakarta Sans | 500 | 14px | normal": [
+     "span.hidden.sm:inline.text-white/40 \"|\"",
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"+91 70426 53174\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span \"Staff Portal\"",
+     "span \"Call:\""
+    ],
+    "Playfair Display | 700 | 60px | normal": [
+     "h1.font-serif.text-4xl.sm:text-5xl.lg:text-6xl \"Kulhad chai, hot parathas an\""
+    ],
+    "Plus Jakarta Sans | 400 | 18px | normal": [
+     "p.text-base.sm:text-lg.text-[#242820].leading-relaxed \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 600 | 16px | normal": [
+     "span \"Order from the menu\"",
+     "span \"Track order\"",
+     "button.min-h-12.px-6.bg-[#F7F1E4].hover:bg-white \"Order now\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "dt.text-xs.text-[#242820]/75.order-2 \"Neighbourhood favourite\"",
+     "dt.text-xs.text-[#242820]/75 \"Average prep time\"",
+     "dt.text-xs.text-[#242820]/75 \"Free delivery above\""
+    ],
+    "Plus Jakarta Sans | 700 | 24px | normal": [
+     "dd.text-xl.sm:text-2xl.font-bold.text-[#234C35] \"4.8★\"",
+     "dd.text-xl.sm:text-2xl.font-bold.text-[#234C35] \"15 min\"",
+     "dd.text-xl.sm:text-2xl.font-bold.text-[#B8651C] \"₹250\""
+    ],
+    "Playfair Display | 700 | 30px | normal": [
+     "h2.font-serif.text-2xl.sm:text-3xl.font-bold \"Browse the menu\"",
+     "h2.font-serif.text-2xl.sm:text-3xl.font-bold \"Popular dishes\"",
+     "h3.font-serif.text-2xl.sm:text-3xl.font-bold \"Free delivery on orders abov\""
+    ],
+    "Playfair Display | 700 | 16px | normal": [
+     "span.font-serif.font-bold.text-base.text-[#242820] \"Tea and Snacks\"",
+     "span.font-serif.font-bold.text-base.text-[#242820] \"Breakfast and Parathas\"",
+     "span.font-serif.font-bold.text-base.text-[#242820] \"Evening Snacks and Chinese\""
+    ],
+    "Plus Jakarta Sans | 400 | 14px | normal": [
+     "span.block.text-sm.text-[#242820]/80.line-clamp-2 \"Fresh earthen Kulhad chai, c\"",
+     "span.block.text-sm.text-[#242820]/80.line-clamp-2 \"Stuffed golden tawa parathas\"",
+     "span.block.text-sm.text-[#242820]/80.line-clamp-2 \"Sizzling wok Indo-Chinese ap\""
+    ],
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "div.absolute.top-2.5.right-2.5.bg-[#234C35] \"Popular\"",
+     "div.absolute.top-2.5.right-2.5.bg-[#234C35] \"Popular\"",
+     "div.absolute.top-2.5.right-2.5.bg-[#234C35] \"Popular\""
+    ],
+    "Playfair Display | 700 | 18px | normal": [
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Special Adrak Elaichi Kulhad\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Mumbai Bun Maska\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 18px | normal": [
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹30\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\""
+    ],
+    "Plus Jakarta Sans | 400 | 16px | normal": [
+     "p.text-sm.sm:text-base.text-[#F7F1E4].leading-relaxed \"Kulhad chai, breakfast parat\"",
+     "p.text-sm.sm:text-base.text-[#242820]/90.leading-relaxed \"No pre-made cold parathas or\"",
+     "p.text-sm.sm:text-base.text-[#242820]/90.leading-relaxed \"No palm oil or substitutes. \""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "span.font-serif.text-2xl.font-bold.text-[#B8651C] \"1\"",
+     "span.font-serif.text-2xl.font-bold.text-[#B8651C] \"2\"",
+     "span.font-serif.text-2xl.font-bold.text-[#B8651C] \"3\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Quick Links\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Location & Hours\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Order Direct\""
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 8,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Slow-simmered whole milk chai brewed with crushed ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Soft toasted bakery bun slathered with generous Am",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flaky golden pastry filled with spiced mashed pota",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy whole wheat flatbread stuffed with spiced p",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Handmade flatbread generously stuffed with seasone",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crisp urad-dal stuffed puris paired with slow-cook",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Two fluffy, golden-fried bhaturas served with dark",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy batter-fried paneer cubes tossed in high-he",
+       "clamp": "2"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "h3.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      },
+      {
+       "el": "h3.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      },
+      {
+       "el": "h3.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      }
+     ]
+    },
+    "paragraphLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-sm.font-semibold.text-[#234C35]",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 10,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Plus Jakarta Sans (web font)": 7594,
+    "Segoe UI Emoji (system)": 2,
+    "Playfair Display (web font)": 1252,
+    "Segoe UI Symbol (system)": 2
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 1,
+    "Plus Jakarta Sans (web font)": 117
+   },
+   "violations": [
+    "3 h1-h3 with line-height outside 1.05-1.4",
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "menu-grid",
+   "viewport": 1440,
+   "census": {
+    "Plus Jakarta Sans | 600 | 14px | normal": 38,
+    "Plus Jakarta Sans | 500 | 14px | normal": 6,
+    "Plus Jakarta Sans | 500 | 12px | normal": 2,
+    "Playfair Display | 700 | 30px | normal": 1,
+    "Plus Jakarta Sans | 400 | 14px | normal": 28,
+    "Plus Jakarta Sans | 600 | 12px | normal": 21,
+    "Plus Jakarta Sans | 400 | 12px | normal": 67,
+    "Playfair Display | 700 | 18px | normal": 27,
+    "Plus Jakarta Sans | 700 | 18px | normal": 27,
+    "Playfair Display | 700 | 24px | normal": 1,
+    "Plus Jakarta Sans | 700 | 12px | normal": 4,
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": 1
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "button.transition-colors.py-2.cursor-pointer.whitespace-nowrap \"Menu & Order\"",
+     "span.font-semibold \"Cart\""
+    ],
+    "Plus Jakarta Sans | 500 | 14px | normal": [
+     "span.hidden.sm:inline.text-white/40 \"|\"",
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"+91 70426 53174\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span \"Staff Portal\"",
+     "span \"Call:\""
+    ],
+    "Playfair Display | 700 | 30px | normal": [
+     "h1.font-serif.text-3xl.font-bold.text-[#234C35] \"Menu and online ordering\""
+    ],
+    "Plus Jakarta Sans | 400 | 14px | normal": [
+     "p.text-sm.text-[#242820]/80.mt-0.5 \"Select your dishes, add them\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Slow-simmered whole milk cha\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Soft toasted bakery bun slat\""
+    ],
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"27\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"5\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"5\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "span \"Tea and Snacks\"",
+     "span.text-xs.text-[#242820]/80 \"1 Clay Kulhad (150 ml)\"",
+     "span \"Tea and Snacks\""
+    ],
+    "Playfair Display | 700 | 18px | normal": [
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Special Adrak Elaichi Kulhad\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Mumbai Bun Maska\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 18px | normal": [
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹30\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "h3.font-serif.text-2xl.font-bold.tracking-tight \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Quick Links\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Location & Hours\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Order Direct\""
+    ],
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": [
+     "input.w-full.pl-9.pr-16.min-h-11"
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 26,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Slow-simmered whole milk chai brewed with crushed ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Soft toasted bakery bun slathered with generous Am",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flaky golden pastry filled with spiced mashed pota",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Double bread triangles stuffed with spicy potato m",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flattened rice tossed with roasted peanuts, curry ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy whole wheat flatbread stuffed with spiced p",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Handmade flatbread generously stuffed with seasone",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Wholesome paratha stuffed with freshly grated caul",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crisp urad-dal stuffed puris paired with slow-cook",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Two fluffy, golden-fried bhaturas served with dark",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy batter-fried paneer cubes tossed in high-he",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Wok-tossed noodles with shredded cabbage, crunchy ",
+       "clamp": "2"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 0,
+     "samples": []
+    },
+    "paragraphLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/80.mt-0.5",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 28,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Plus Jakarta Sans (web font)": 11791,
+    "Segoe UI Emoji (system)": 2,
+    "Playfair Display (web font)": 1480
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 1,
+    "Plus Jakarta Sans (web font)": 178
+   },
+   "violations": [
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "cart-review",
+   "viewport": 1440,
+   "census": {
+    "Plus Jakarta Sans | 600 | 14px | normal": 37,
+    "Plus Jakarta Sans | 500 | 14px | normal": 6,
+    "Plus Jakarta Sans | 500 | 12px | normal": 6,
+    "Plus Jakarta Sans | 700 | 12px | normal": 11,
+    "Playfair Display | 700 | 30px | normal": 1,
+    "Plus Jakarta Sans | 400 | 14px | normal": 28,
+    "Plus Jakarta Sans | 600 | 12px | normal": 23,
+    "Plus Jakarta Sans | 400 | 12px | normal": 74,
+    "Playfair Display | 700 | 18px | normal": 28,
+    "Plus Jakarta Sans | 700 | 18px | normal": 27,
+    "Plus Jakarta Sans | 700 | 14px | normal": 4,
+    "Playfair Display | 700 | 14px | normal": 2,
+    "Plus Jakarta Sans | 700 | 16px | normal": 1,
+    "Playfair Display | 700 | 24px | normal": 1,
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": 1
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "button.transition-colors.py-2.cursor-pointer.whitespace-nowrap \"Menu & Order\"",
+     "span.font-semibold \"Cart\""
+    ],
+    "Plus Jakarta Sans | 500 | 14px | normal": [
+     "span.hidden.sm:inline.text-white/40 \"|\"",
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"+91 70426 53174\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span \"Staff Portal\"",
+     "span.hidden.sm:inline.border-l.border-white/20 \"₹70\"",
+     "button.text-red-600.hover:text-red-700.font-medium.cursor-pointer \"Clear Basket\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "span.absolute.-top-2.-right-2.bg-[#D98235] \"2\"",
+     "strong \"₹180\"",
+     "strong \"FREE delivery\""
+    ],
+    "Playfair Display | 700 | 30px | normal": [
+     "h1.font-serif.text-3xl.font-bold.text-[#234C35] \"Menu and online ordering\""
+    ],
+    "Plus Jakarta Sans | 400 | 14px | normal": [
+     "p.text-sm.text-[#242820]/80.mt-0.5 \"Select your dishes, add them\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Slow-simmered whole milk cha\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Soft toasted bakery bun slat\""
+    ],
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"27\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"5\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"5\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "span \"Tea and Snacks\"",
+     "span.text-xs.text-[#242820]/80 \"1 Clay Kulhad (150 ml)\"",
+     "span \"Tea and Snacks\""
+    ],
+    "Playfair Display | 700 | 18px | normal": [
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Special Adrak Elaichi Kulhad\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Mumbai Bun Maska\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 18px | normal": [
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹30\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\""
+    ],
+    "Plus Jakarta Sans | 700 | 14px | normal": [
+     "span.min-w-5.text-center.text-sm.font-bold \"1\"",
+     "span.min-w-5.text-center.text-sm.font-bold \"1\"",
+     "span \"Total Amount Payable\""
+    ],
+    "Playfair Display | 700 | 14px | normal": [
+     "h4.font-serif.font-bold.text-sm.text-[#242820] \"Special Adrak Elaichi Kulhad\"",
+     "h4.font-serif.font-bold.text-sm.text-[#242820] \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 16px | normal": [
+     "span.tabular-nums.tabular-nums.text-base \"₹100\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "h3.font-serif.text-2xl.font-bold.tracking-tight \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": [
+     "input.w-full.pl-9.pr-16.min-h-11"
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 28,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Slow-simmered whole milk chai brewed with crushed ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Soft toasted bakery bun slathered with generous Am",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flaky golden pastry filled with spiced mashed pota",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Double bread triangles stuffed with spicy potato m",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flattened rice tossed with roasted peanuts, curry ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy whole wheat flatbread stuffed with spiced p",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Handmade flatbread generously stuffed with seasone",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Wholesome paratha stuffed with freshly grated caul",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crisp urad-dal stuffed puris paired with slow-cook",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Two fluffy, golden-fried bhaturas served with dark",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy batter-fried paneer cubes tossed in high-he",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Wok-tossed noodles with shredded cabbage, crunchy ",
+       "clamp": "2"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 1,
+     "samples": [
+      {
+       "el": "h2.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      }
+     ]
+    },
+    "paragraphLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/80.mt-0.5",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 38,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Plus Jakarta Sans (web font)": 12234,
+    "Segoe UI Emoji (system)": 2,
+    "Playfair Display (web font)": 1710
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 1,
+    "Plus Jakarta Sans (web font)": 221
+   },
+   "violations": [
+    "1 h1-h3 with line-height outside 1.05-1.4",
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "admin-orders",
+   "viewport": 1440,
+   "census": {
+    "Plus Jakarta Sans | 600 | 14px | normal": 9,
+    "Plus Jakarta Sans | 500 | 14px | normal": 8,
+    "Plus Jakarta Sans | 600 | 12px | normal": 13,
+    "Playfair Display | 700 | 24px | normal": 2,
+    "Plus Jakarta Sans | 700 | 12px | normal": 5,
+    "Plus Jakarta Sans | 400 | 12px | normal": 39,
+    "Plus Jakarta Sans | 700 | 14px | normal": 6,
+    "Plus Jakarta Sans | 500 | 12px | normal": 1
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "span.font-semibold \"Cart\"",
+     "span \"Products (\""
+    ],
+    "Plus Jakarta Sans | 500 | 14px | normal": [
+     "span.hidden.sm:inline.text-white/40 \"|\"",
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"+91 70426 53174\""
+    ],
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span \"Staff Portal\"",
+     "span.text-xs.px-2.py-0.5.rounded \"Pending WhatsApp Confirmatio\"",
+     "p.font-semibold.text-[#242820] \"Rahul Sharma\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "span.font-serif.text-2xl.font-bold.text-[#234C35] \"Natkhat Café\"",
+     "h3.font-serif.text-2xl.font-bold.tracking-tight \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "span.px-2.py-0.5.bg-[#234C35]/10.text-[#234C35] \"Staff CMS\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Quick Links\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Location & Hours\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "p.text-xs.text-[#242820]/70.mt-0.5 \"Single-Outlet Menu Managemen\"",
+     "p.text-xs.text-[#242820]/75 \"Audit history of order reque\"",
+     "span.text-xs.text-gray-500.tabular-nums \"1/6/2026, 4:00:00 pm\""
+    ],
+    "Plus Jakarta Sans | 700 | 14px | normal": [
+     "span.tabular-nums.font-bold.text-sm.text-[#234C35] \"#\"",
+     "p.tabular-nums.font-bold.text-sm.text-[#234C35] \"₹320\"",
+     "span.tabular-nums.font-bold.text-sm.text-[#234C35] \"#\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span \"Call:\""
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 0,
+     "samples": []
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 0,
+     "samples": []
+    },
+    "paragraphLeading": {
+     "count": 4,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#242820]/70.mt-0.5",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#242820]/75",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 5,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#242820]/70.mt-0.5",
+       "px": 12,
+       "len": 66
+      },
+      {
+       "el": "p.text-xs.text-[#242820]/75",
+       "px": 12,
+       "len": 92
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 8,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Plus Jakarta Sans (web font)": 3082,
+    "Segoe UI Emoji (system)": 2,
+    "Playfair Display (web font)": 48
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 1,
+    "Plus Jakarta Sans (web font)": 114
+   },
+   "violations": [
+    "4 long paragraph(s) with line-height outside 1.45-1.8",
+    "5 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "home-hero",
+   "viewport": 390,
+   "census": {
+    "Plus Jakarta Sans | 600 | 12px | normal": 9,
+    "Plus Jakarta Sans | 500 | 12px | normal": 2,
+    "Plus Jakarta Sans | 600 | 14px | normal": 19,
+    "Playfair Display | 700 | 36px | normal": 1,
+    "Plus Jakarta Sans | 400 | 16px | normal": 1,
+    "Plus Jakarta Sans | 600 | 16px | normal": 4,
+    "Plus Jakarta Sans | 400 | 12px | normal": 33,
+    "Plus Jakarta Sans | 700 | 20px | normal": 3,
+    "Playfair Display | 700 | 24px | normal": 9,
+    "Playfair Display | 700 | 16px | normal": 7,
+    "Plus Jakarta Sans | 400 | 14px | normal": 20,
+    "Playfair Display | 700 | 18px | normal": 11,
+    "Plus Jakarta Sans | 700 | 18px | normal": 8,
+    "Plus Jakarta Sans | 700 | 12px | normal": 4
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "div.absolute.top-2.5.right-2.5.bg-[#234C35] \"Popular\"",
+     "div.absolute.top-2.5.right-2.5.bg-[#234C35] \"Popular\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"Call:\""
+    ],
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.font-semibold \"Cart\"",
+     "p.text-sm.font-semibold.text-[#234C35] \"Pure vegetarian · Desi ghee \"",
+     "span \"View all dishes\""
+    ],
+    "Playfair Display | 700 | 36px | normal": [
+     "h1.font-serif.text-4xl.sm:text-5xl.lg:text-6xl \"Kulhad chai, hot parathas an\""
+    ],
+    "Plus Jakarta Sans | 400 | 16px | normal": [
+     "p.text-base.sm:text-lg.text-[#242820].leading-relaxed \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 600 | 16px | normal": [
+     "span \"Order from the menu\"",
+     "span \"Track order\"",
+     "button.min-h-12.px-6.bg-[#F7F1E4].hover:bg-white \"Order now\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "dt.text-xs.text-[#242820]/75.order-2 \"Neighbourhood favourite\"",
+     "dt.text-xs.text-[#242820]/75 \"Average prep time\"",
+     "dt.text-xs.text-[#242820]/75 \"Free delivery above\""
+    ],
+    "Plus Jakarta Sans | 700 | 20px | normal": [
+     "dd.text-xl.sm:text-2xl.font-bold.text-[#234C35] \"4.8★\"",
+     "dd.text-xl.sm:text-2xl.font-bold.text-[#234C35] \"15 min\"",
+     "dd.text-xl.sm:text-2xl.font-bold.text-[#B8651C] \"₹250\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "h2.font-serif.text-2xl.sm:text-3xl.font-bold \"Browse the menu\"",
+     "h2.font-serif.text-2xl.sm:text-3xl.font-bold \"Popular dishes\"",
+     "h3.font-serif.text-2xl.sm:text-3xl.font-bold \"Free delivery on orders abov\""
+    ],
+    "Playfair Display | 700 | 16px | normal": [
+     "span.font-serif.font-bold.text-base.text-[#242820] \"Tea and Snacks\"",
+     "span.font-serif.font-bold.text-base.text-[#242820] \"Breakfast and Parathas\"",
+     "span.font-serif.font-bold.text-base.text-[#242820] \"Evening Snacks and Chinese\""
+    ],
+    "Plus Jakarta Sans | 400 | 14px | normal": [
+     "span.block.text-sm.text-[#242820]/80.line-clamp-2 \"Fresh earthen Kulhad chai, c\"",
+     "span.block.text-sm.text-[#242820]/80.line-clamp-2 \"Stuffed golden tawa parathas\"",
+     "span.block.text-sm.text-[#242820]/80.line-clamp-2 \"Sizzling wok Indo-Chinese ap\""
+    ],
+    "Playfair Display | 700 | 18px | normal": [
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Special Adrak Elaichi Kulhad\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Mumbai Bun Maska\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 18px | normal": [
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹30\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Quick Links\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Location & Hours\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Order Direct\""
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 9,
+     "samples": [
+      {
+       "el": "span.truncate",
+       "text": "🔥 Special Lunch Thali available 12:00 PM – 4:00 P"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Slow-simmered whole milk chai brewed with crushed ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Soft toasted bakery bun slathered with generous Am",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flaky golden pastry filled with spiced mashed pota",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy whole wheat flatbread stuffed with spiced p",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Handmade flatbread generously stuffed with seasone",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crisp urad-dal stuffed puris paired with slow-cook",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Two fluffy, golden-fried bhaturas served with dark",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy batter-fried paneer cubes tossed in high-he",
+       "clamp": "2"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "h3.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      },
+      {
+       "el": "h3.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      },
+      {
+       "el": "h3.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      }
+     ]
+    },
+    "paragraphLeading": {
+     "count": 4,
+     "samples": [
+      {
+       "el": "p.text-sm.font-semibold.text-[#234C35]",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p.text-sm.sm:text-base.text-[#242820]/90",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 10,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Segoe UI Emoji (system)": 4,
+    "Plus Jakarta Sans (web font)": 7532,
+    "Playfair Display (web font)": 1258,
+    "Segoe UI Symbol (system)": 2
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 2,
+    "Plus Jakarta Sans (web font)": 130
+   },
+   "violations": [
+    "3 h1-h3 with line-height outside 1.05-1.4",
+    "4 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "menu-grid",
+   "viewport": 390,
+   "census": {
+    "Plus Jakarta Sans | 600 | 12px | normal": 22,
+    "Plus Jakarta Sans | 500 | 12px | normal": 2,
+    "Plus Jakarta Sans | 600 | 14px | normal": 36,
+    "Playfair Display | 700 | 30px | normal": 1,
+    "Plus Jakarta Sans | 400 | 14px | normal": 28,
+    "Plus Jakarta Sans | 400 | 12px | normal": 67,
+    "Playfair Display | 700 | 18px | normal": 27,
+    "Plus Jakarta Sans | 700 | 18px | normal": 27,
+    "Playfair Display | 700 | 24px | normal": 1,
+    "Plus Jakarta Sans | 700 | 12px | normal": 4,
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": 1
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"27\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"5\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"Call:\""
+    ],
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.font-semibold \"Cart\"",
+     "span \"All Delicacies\"",
+     "span \"Tea and Snacks\""
+    ],
+    "Playfair Display | 700 | 30px | normal": [
+     "h1.font-serif.text-3xl.font-bold.text-[#234C35] \"Menu and online ordering\""
+    ],
+    "Plus Jakarta Sans | 400 | 14px | normal": [
+     "p.text-sm.text-[#242820]/80.mt-0.5 \"Select your dishes, add them\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Slow-simmered whole milk cha\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Soft toasted bakery bun slat\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "span \"Tea and Snacks\"",
+     "span.text-xs.text-[#242820]/80 \"1 Clay Kulhad (150 ml)\"",
+     "span \"Tea and Snacks\""
+    ],
+    "Playfair Display | 700 | 18px | normal": [
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Special Adrak Elaichi Kulhad\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Mumbai Bun Maska\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 18px | normal": [
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹30\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "h3.font-serif.text-2xl.font-bold.tracking-tight \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Quick Links\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Location & Hours\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Order Direct\""
+    ],
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": [
+     "input.w-full.pl-9.pr-16.min-h-11"
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 24,
+     "samples": [
+      {
+       "el": "span.truncate",
+       "text": "🔥 Special Lunch Thali available 12:00 PM – 4:00 P"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Slow-simmered whole milk chai brewed with crushed ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Soft toasted bakery bun slathered with generous Am",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flaky golden pastry filled with spiced mashed pota",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Double bread triangles stuffed with spicy potato m",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flattened rice tossed with roasted peanuts, curry ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy whole wheat flatbread stuffed with spiced p",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Handmade flatbread generously stuffed with seasone",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Wholesome paratha stuffed with freshly grated caul",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crisp urad-dal stuffed puris paired with slow-cook",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Two fluffy, golden-fried bhaturas served with dark",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy batter-fried paneer cubes tossed in high-he",
+       "clamp": "2"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 0,
+     "samples": []
+    },
+    "paragraphLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/80.mt-0.5",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 28,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Segoe UI Emoji (system)": 4,
+    "Plus Jakarta Sans (web font)": 11977,
+    "Playfair Display (web font)": 1492
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 2,
+    "Plus Jakarta Sans (web font)": 191
+   },
+   "violations": [
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "cart-review",
+   "viewport": 390,
+   "census": {
+    "Plus Jakarta Sans | 600 | 12px | normal": 24,
+    "Plus Jakarta Sans | 500 | 12px | normal": 5,
+    "Plus Jakarta Sans | 700 | 12px | normal": 11,
+    "Plus Jakarta Sans | 600 | 14px | normal": 35,
+    "Playfair Display | 700 | 30px | normal": 1,
+    "Plus Jakarta Sans | 400 | 14px | normal": 28,
+    "Plus Jakarta Sans | 400 | 12px | normal": 74,
+    "Playfair Display | 700 | 18px | normal": 28,
+    "Plus Jakarta Sans | 700 | 18px | normal": 27,
+    "Plus Jakarta Sans | 700 | 14px | normal": 4,
+    "Playfair Display | 700 | 14px | normal": 2,
+    "Plus Jakarta Sans | 700 | 16px | normal": 1,
+    "Playfair Display | 700 | 24px | normal": 1,
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": 1
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"27\"",
+     "span.text-xs.tabular-nums.px-1.5.rounded-sm \"5\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "button.text-red-600.hover:text-red-700.font-medium.cursor-pointer \"Clear Basket\"",
+     "p.text-xs.tabular-nums.font-medium.text-[#234C35] \"₹30\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "span.absolute.-top-2.-right-2.bg-[#D98235] \"2\"",
+     "strong \"₹180\"",
+     "strong \"FREE delivery\""
+    ],
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.font-semibold \"Cart\"",
+     "span \"All Delicacies\"",
+     "span \"Tea and Snacks\""
+    ],
+    "Playfair Display | 700 | 30px | normal": [
+     "h1.font-serif.text-3xl.font-bold.text-[#234C35] \"Menu and online ordering\""
+    ],
+    "Plus Jakarta Sans | 400 | 14px | normal": [
+     "p.text-sm.text-[#242820]/80.mt-0.5 \"Select your dishes, add them\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Slow-simmered whole milk cha\"",
+     "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1 \"Soft toasted bakery bun slat\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "span \"Tea and Snacks\"",
+     "span.text-xs.text-[#242820]/80 \"1 Clay Kulhad (150 ml)\"",
+     "span \"Tea and Snacks\""
+    ],
+    "Playfair Display | 700 | 18px | normal": [
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Special Adrak Elaichi Kulhad\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Mumbai Bun Maska\"",
+     "h3.font-serif.font-bold.text-lg.leading-snug \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 18px | normal": [
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹30\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\"",
+     "span.text-lg.font-bold.text-[#234C35].tabular-nums \"₹40\""
+    ],
+    "Plus Jakarta Sans | 700 | 14px | normal": [
+     "span.min-w-5.text-center.text-sm.font-bold \"1\"",
+     "span.min-w-5.text-center.text-sm.font-bold \"1\"",
+     "span \"Total Amount Payable\""
+    ],
+    "Playfair Display | 700 | 14px | normal": [
+     "h4.font-serif.font-bold.text-sm.text-[#242820] \"Special Adrak Elaichi Kulhad\"",
+     "h4.font-serif.font-bold.text-sm.text-[#242820] \"Crispy Samosa Plate (2 Pcs)\""
+    ],
+    "Plus Jakarta Sans | 700 | 16px | normal": [
+     "span.tabular-nums.tabular-nums.text-base \"₹100\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "h3.font-serif.text-2xl.font-bold.tracking-tight \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 400 | 16px | normal [form control]": [
+     "input.w-full.pl-9.pr-16.min-h-11"
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 26,
+     "samples": [
+      {
+       "el": "span.truncate",
+       "text": "🔥 Special Lunch Thali available 12:00 PM – 4:00 P"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Slow-simmered whole milk chai brewed with crushed ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Soft toasted bakery bun slathered with generous Am",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flaky golden pastry filled with spiced mashed pota",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Double bread triangles stuffed with spicy potato m",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Flattened rice tossed with roasted peanuts, curry ",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy whole wheat flatbread stuffed with spiced p",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Handmade flatbread generously stuffed with seasone",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Wholesome paratha stuffed with freshly grated caul",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crisp urad-dal stuffed puris paired with slow-cook",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Two fluffy, golden-fried bhaturas served with dark",
+       "clamp": "2"
+      },
+      {
+       "el": "p.text-sm.text-[#242820]/85.line-clamp-2.mt-1",
+       "text": "Crispy batter-fried paneer cubes tossed in high-he",
+       "clamp": "2"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 1,
+     "samples": [
+      {
+       "el": "h2.font-serif.font-bold.text-lg.text-[#234C35]",
+       "lh": 1.56,
+       "px": 18
+      }
+     ]
+    },
+    "paragraphLeading": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-sm.text-[#242820]/80.mt-0.5",
+       "lh": 1.43,
+       "px": 14
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 3,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 37,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Segoe UI Emoji (system)": 4,
+    "Plus Jakarta Sans (web font)": 12414,
+    "Playfair Display (web font)": 1686
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 2,
+    "Plus Jakarta Sans (web font)": 231
+   },
+   "violations": [
+    "1 h1-h3 with line-height outside 1.05-1.4",
+    "3 long paragraph(s) with line-height outside 1.45-1.8",
+    "3 paragraph(s) over 50 characters set below 14px"
+   ]
+  },
+  {
+   "scene": "admin-orders",
+   "viewport": 390,
+   "census": {
+    "Plus Jakarta Sans | 600 | 12px | normal": 13,
+    "Plus Jakarta Sans | 500 | 12px | normal": 2,
+    "Plus Jakarta Sans | 600 | 14px | normal": 8,
+    "Playfair Display | 700 | 24px | normal": 2,
+    "Plus Jakarta Sans | 700 | 12px | normal": 5,
+    "Plus Jakarta Sans | 400 | 12px | normal": 39,
+    "Plus Jakarta Sans | 500 | 14px | normal": 1,
+    "Plus Jakarta Sans | 700 | 14px | normal": 6
+   },
+   "samples": {
+    "Plus Jakarta Sans | 600 | 12px | normal": [
+     "span.inline-flex.items-center.gap-1.5.text-[#D98235] \"8:00 AM – 10:30 PM (Mon – Su\"",
+     "span.text-xs.px-2.py-0.5.rounded \"Pending WhatsApp Confirmatio\"",
+     "p.font-semibold.text-[#242820] \"Rahul Sharma\""
+    ],
+    "Plus Jakarta Sans | 500 | 12px | normal": [
+     "span.truncate \"🔥 Special Lunch Thali avail\"",
+     "span \"Call:\""
+    ],
+    "Plus Jakarta Sans | 600 | 14px | normal": [
+     "span.font-semibold \"Cart\"",
+     "span \"Products (\"",
+     "span \"Categories (\""
+    ],
+    "Playfair Display | 700 | 24px | normal": [
+     "span.font-serif.text-2xl.font-bold.text-[#234C35] \"Natkhat Café\"",
+     "h3.font-serif.text-2xl.font-bold.tracking-tight \"Natkhat Café\""
+    ],
+    "Plus Jakarta Sans | 700 | 12px | normal": [
+     "span.px-2.py-0.5.bg-[#234C35]/10.text-[#234C35] \"Staff CMS\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Quick Links\"",
+     "h4.text-xs.font-bold.uppercase.tracking-wider \"Location & Hours\""
+    ],
+    "Plus Jakarta Sans | 400 | 12px | normal": [
+     "p.text-xs.text-[#242820]/70.mt-0.5 \"Single-Outlet Menu Managemen\"",
+     "p.text-xs.text-[#242820]/75 \"Audit history of order reque\"",
+     "span.text-xs.text-gray-500.tabular-nums \"1/6/2026, 4:00:00 pm\""
+    ],
+    "Plus Jakarta Sans | 500 | 14px | normal": [
+     "span \"Sign Out\""
+    ],
+    "Plus Jakarta Sans | 700 | 14px | normal": [
+     "span.tabular-nums.font-bold.text-sm.text-[#234C35] \"#\"",
+     "p.tabular-nums.font-bold.text-sm.text-[#234C35] \"₹320\"",
+     "span.tabular-nums.font-bold.text-sm.text-[#234C35] \"#\""
+    ]
+   },
+   "issues": {
+    "belowMinSize": {
+     "count": 0,
+     "samples": []
+    },
+    "inputsBelow16": {
+     "count": 0,
+     "samples": []
+    },
+    "italic": {
+     "count": 0,
+     "samples": []
+    },
+    "longUppercase": {
+     "count": 0,
+     "samples": []
+    },
+    "tightCaps": {
+     "count": 0,
+     "samples": []
+    },
+    "wideTracking": {
+     "count": 0,
+     "samples": []
+    },
+    "clipped": {
+     "count": 0,
+     "samples": []
+    },
+    "truncated": {
+     "count": 1,
+     "samples": [
+      {
+       "el": "span.truncate",
+       "text": "🔥 Special Lunch Thali available 12:00 PM – 4:00 P"
+      }
+     ]
+    },
+    "headingTruncated": {
+     "count": 0,
+     "samples": []
+    },
+    "priceNoTabular": {
+     "count": 0,
+     "samples": []
+    },
+    "headingLeading": {
+     "count": 0,
+     "samples": []
+    },
+    "paragraphLeading": {
+     "count": 4,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#242820]/70.mt-0.5",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#242820]/75",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p",
+       "lh": 1.33,
+       "px": 12
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "lh": 1.33,
+       "px": 12
+      }
+     ]
+    },
+    "smallParagraph": {
+     "count": 5,
+     "samples": [
+      {
+       "el": "p.text-xs.text-[#242820]/70.mt-0.5",
+       "px": 12,
+       "len": 66
+      },
+      {
+       "el": "p.text-xs.text-[#242820]/75",
+       "px": 12,
+       "len": 92
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80.leading-relaxed",
+       "px": 12,
+       "len": 54
+      },
+      {
+       "el": "p",
+       "px": 12,
+       "len": 86
+      },
+      {
+       "el": "p.text-xs.text-[#F7F1E4]/80",
+       "px": 12,
+       "len": 78
+      }
+     ]
+    },
+    "longParagraphMobile": {
+     "count": 0,
+     "samples": []
+    },
+    "roleMismatch": {
+     "count": 0,
+     "samples": []
+    },
+    "logoSqueezed": {
+     "count": 0,
+     "samples": []
+    }
+   },
+   "devanagari": 0,
+   "rupeeNodes": 8,
+   "pageOverflowX": 0,
+   "faces": [
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "italic",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Playfair Display",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "400",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "500",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "600",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "700",
+     "style": "normal",
+     "status": "loaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    },
+    {
+     "family": "Plus Jakarta Sans",
+     "weight": "800",
+     "style": "normal",
+     "status": "unloaded"
+    }
+   ],
+   "platformFonts": {
+    "Segoe UI Emoji (system)": 4,
+    "Plus Jakarta Sans (web font)": 2970,
+    "Playfair Display (web font)": 48
+   },
+   "rupeeFonts": {
+    "Segoe UI Emoji (system)": 2,
+    "Plus Jakarta Sans (web font)": 127
+   },
+   "violations": [
+    "4 long paragraph(s) with line-height outside 1.45-1.8",
+    "5 paragraph(s) over 50 characters set below 14px"
+   ]
+  }
+ ]
+}

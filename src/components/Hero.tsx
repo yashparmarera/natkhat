@@ -1,7 +1,14 @@
 import React from 'react';
 import { useCafe } from '../context/CafeContext';
 import { formatINRPlain } from '../utils/currency';
-import { ArrowRight, PackageSearch } from 'lucide-react';
+import { ArrowRight, PackageSearch, UtensilsCrossed, MessageCircle, BadgeCheck, Bike } from 'lucide-react';
+
+const HOW_IT_WORKS = [
+  { icon: UtensilsCrossed, title: 'Pick dishes', note: 'Browse the menu' },
+  { icon: MessageCircle, title: 'Send on WhatsApp', note: 'One tap checkout' },
+  { icon: BadgeCheck, title: 'We confirm live', note: 'Track the status' },
+  { icon: Bike, title: 'Hot to your door', note: 'Cooked fresh' },
+];
 
 interface HeroProps {
   onExploreMenu: () => void;
@@ -61,6 +68,24 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onOpenTrack }) => {
                 </dd>
               </div>
             </dl>
+
+            <ol className="hidden lg:grid grid-cols-4 gap-3 pt-2 list-none m-0 p-0" aria-label="How ordering works">
+              {HOW_IT_WORKS.map(({ icon: Icon, title, note }, i) => (
+                <li
+                  key={title}
+                  className="relative rounded-md border border-[#234C35]/20 bg-white/60 p-3 flex flex-col gap-2"
+                >
+                  <span className="absolute top-2 right-2 text-xs font-bold text-[#B8651C] tabular-nums">
+                    {i + 1}
+                  </span>
+                  <span className="w-9 h-9 rounded-full bg-[#234C35] text-[#F7F1E4] flex items-center justify-center">
+                    <Icon className="w-4 h-4" aria-hidden="true" />
+                  </span>
+                  <span className="text-sm font-semibold text-[#234C35] leading-tight">{title}</span>
+                  <span className="text-xs text-[#242820]/75">{note}</span>
+                </li>
+              ))}
+            </ol>
           </div>
 
           <figure className="lg:col-span-5 order-1 lg:order-2 m-0">
