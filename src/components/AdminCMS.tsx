@@ -48,7 +48,7 @@ export const AdminCMS: React.FC = () => {
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState<string | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
-  const [activeTab, setActiveTab] = useState<'products' | 'categories' | 'settings' | 'orders'>('products');
+  const [activeTab, setActiveTab] = useState<'products' | 'categories' | 'settings' | 'orders'>('orders');
 
   // Change password modal / state
   const [isChangePasswordOpen, setIsChangePasswordOpen] = useState(false);
@@ -307,6 +307,18 @@ export const AdminCMS: React.FC = () => {
       {/* Tabs */}
       <div className="flex items-center gap-2 border-b border-gray-200 overflow-x-auto pb-1 scrollbar-none">
         <button
+          onClick={() => setActiveTab('orders')}
+          className={`min-h-11 px-4 text-sm font-semibold rounded-md flex items-center gap-2 transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235] ${
+            activeTab === 'orders'
+              ? 'bg-[#234C35] text-white '
+              : 'text-[#242820]/70 hover:text-[#234C35]'
+          }`}
+        >
+          <ClipboardList className="w-3.5 h-3.5" />
+          <span>WhatsApp Orders Log ({orders.length})</span>
+        </button>
+
+        <button
           onClick={() => setActiveTab('products')}
           className={`min-h-11 px-4 text-sm font-semibold rounded-md flex items-center gap-2 transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235] ${
             activeTab === 'products'
@@ -340,18 +352,6 @@ export const AdminCMS: React.FC = () => {
         >
           <SettingsIcon className="w-3.5 h-3.5" />
           <span>Store & WhatsApp Settings</span>
-        </button>
-
-        <button
-          onClick={() => setActiveTab('orders')}
-          className={`min-h-11 px-4 text-sm font-semibold rounded-md flex items-center gap-2 transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235] ${
-            activeTab === 'orders'
-              ? 'bg-[#234C35] text-white '
-              : 'text-[#242820]/70 hover:text-[#234C35]'
-          }`}
-        >
-          <ClipboardList className="w-3.5 h-3.5" />
-          <span>WhatsApp Orders Log ({orders.length})</span>
         </button>
       </div>
 
