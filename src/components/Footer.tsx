@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 href={`https://wa.me/${settings.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2 px-3 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                className="w-full py-2 px-3 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold rounded-md flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
                 <span>WhatsApp: +{settings.whatsappNumber}</span>
@@ -115,7 +115,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
 
               <a
                 href={`tel:${settings.contactPhone}`}
-                className="w-full py-2 px-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer border border-white/20"
+                className="w-full py-2 px-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium rounded-md flex items-center justify-center gap-2 transition-colors cursor-pointer border border-white/20"
               >
                 <Phone className="w-3.5 h-3.5 text-[#D98235]" />
                 <span>Call: {settings.contactPhone}</span>

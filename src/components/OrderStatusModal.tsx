@@ -23,7 +23,7 @@ const BADGE_CLASSES: Record<string, string> = {
 /** Status-aware badge for the staff order list and the status popup. */
 export const OrderStatusBadge: React.FC<{ status: string; orderType?: OrderType }> = ({ status, orderType }) => (
   <span
-    className={`text-[11px] px-2 py-0.5 rounded font-semibold border ${
+    className={`text-xs px-2 py-0.5 rounded font-semibold border ${
       BADGE_CLASSES[status] || 'bg-gray-100 text-gray-700 border-gray-200'
     }`}
   >
@@ -96,7 +96,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
         role="dialog"
         aria-modal="true"
         aria-labelledby="order-status-title"
-        className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl border border-gray-200 space-y-4 focus:outline-hidden"
+        className="bg-white rounded-md max-w-md w-full max-h-[90vh] overflow-y-auto p-6  border border-gray-200 space-y-4 focus:outline-hidden"
       >
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -112,15 +112,15 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
             onClick={onClose}
             disabled={isSaving}
             aria-label="Close status popup"
-            className="p-1.5 rounded-lg text-[#242820]/60 hover:text-[#234C35] hover:bg-black/5 transition-colors cursor-pointer disabled:opacity-50"
+            className="p-1.5 rounded-md text-[#242820]/60 hover:text-[#234C35] hover:bg-black/5 transition-colors cursor-pointer disabled:opacity-50"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="p-3 bg-[#F7F1E4]/60 rounded-xl border border-[#234C35]/10 text-xs space-y-2">
+        <div className="p-3 bg-[#F7F1E4]/60 rounded-md border border-[#234C35]/10 text-xs space-y-2">
           <div className="flex items-center justify-between gap-2">
-            <span className="font-mono font-bold text-sm text-[#234C35]">#{order.referenceId}</span>
+            <span className="tabular-nums font-bold text-sm text-[#234C35]">#{order.referenceId}</span>
             <span className="font-semibold text-[#242820]">
               {orderType === 'pickup' ? 'Takeaway / Pickup' : 'Home Delivery'}
             </span>
@@ -146,7 +146,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
                     type="button"
                     onClick={() => apply(next)}
                     disabled={isSaving}
-                    className={`w-full px-4 py-3 rounded-xl text-left transition-colors cursor-pointer disabled:opacity-50 ${
+                    className={`w-full px-4 py-3 rounded-md text-left transition-colors cursor-pointer disabled:opacity-50 ${
                       index === 0
                         ? 'bg-[#234C35] hover:bg-[#1a3827] text-white'
                         : 'bg-white hover:bg-[#F7F1E4]/70 border border-[#234C35]/25 text-[#234C35]'
@@ -156,7 +156,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
                       {saving === next ? 'Saving...' : getStatusActionLabel(next, orderType)}
                     </span>
                     {orderType === 'pickup' && (
-                      <span className={`block text-[11px] mt-0.5 ${index === 0 ? 'text-[#F7F1E4]/80' : 'text-[#242820]/60'}`}>
+                      <span className={`block text-xs mt-0.5 ${index === 0 ? 'text-[#F7F1E4]/80' : 'text-[#242820]/60'}`}>
                         Customer sees: {customerSees(next)}
                       </span>
                     )}
@@ -166,14 +166,14 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
             )}
 
             {orderType !== 'pickup' && (
-              <p className="text-[11px] text-[#242820]/60">
+              <p className="text-xs text-[#242820]/60">
                 Delivery orders can be confirmed or cancelled here. Preparing and ready-for-takeaway updates are for takeaway orders.
               </p>
             )}
 
             {canCancel &&
               (confirmingCancel ? (
-                <div className="p-3 bg-red-50 border border-red-200 rounded-xl space-y-2">
+                <div className="p-3 bg-red-50 border border-red-200 rounded-md space-y-2">
                   <p className="text-xs text-red-900 flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5 text-red-600" />
                     <span>Cancel this order? It will be marked as cancelled and cannot be reopened.</span>
@@ -183,7 +183,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
                       type="button"
                       onClick={() => apply('cancelled')}
                       disabled={isSaving}
-                      className="flex-1 px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-lg cursor-pointer disabled:opacity-50"
+                      className="flex-1 px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-md cursor-pointer disabled:opacity-50"
                     >
                       {saving === 'cancelled' ? 'Cancelling...' : 'Yes, cancel order'}
                     </button>
@@ -191,7 +191,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
                       type="button"
                       onClick={() => setConfirmingCancel(false)}
                       disabled={isSaving}
-                      className="flex-1 px-3 py-2 bg-white hover:bg-gray-50 border border-gray-300 text-[#242820] text-xs font-semibold rounded-lg cursor-pointer disabled:opacity-50"
+                      className="flex-1 px-3 py-2 bg-white hover:bg-gray-50 border border-gray-300 text-[#242820] text-xs font-semibold rounded-md cursor-pointer disabled:opacity-50"
                     >
                       Keep order
                     </button>
@@ -202,7 +202,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
                   type="button"
                   onClick={() => setConfirmingCancel(true)}
                   disabled={isSaving}
-                  className="w-full px-4 py-2.5 bg-white hover:bg-red-50 border border-red-200 text-red-700 text-xs font-semibold rounded-xl cursor-pointer disabled:opacity-50"
+                  className="w-full px-4 py-2.5 bg-white hover:bg-red-50 border border-red-200 text-red-700 text-xs font-semibold rounded-md cursor-pointer disabled:opacity-50"
                 >
                   {getStatusActionLabel('cancelled', orderType)}
                 </button>
@@ -211,7 +211,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
         )}
 
         {error && (
-          <div role="alert" className="p-2.5 bg-red-50 text-red-700 text-xs rounded-lg flex items-start gap-2 border border-red-200">
+          <div role="alert" className="p-2.5 bg-red-50 text-red-700 text-xs rounded-md flex items-start gap-2 border border-red-200">
             <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
             <span>{error}</span>
           </div>
@@ -222,7 +222,7 @@ export const OrderStatusModal: React.FC<OrderStatusModalProps> = ({ order, onClo
             type="button"
             onClick={onClose}
             disabled={isSaving}
-            className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-xs font-semibold cursor-pointer disabled:opacity-50"
+            className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md text-xs font-semibold cursor-pointer disabled:opacity-50"
           >
             Close
           </button>

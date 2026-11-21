@@ -153,9 +153,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   const amountToFreeDelivery = settings.freeDeliveryThresholdPaise - cartSubtotalPaise;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-black/60 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-black/60  flex justify-end animate-in fade-in duration-200">
       <div
-        className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between animate-in slide-in-from-right duration-300 relative"
+        className="w-full max-w-md bg-white h-full  flex flex-col justify-between animate-in slide-in-from-right duration-300 relative"
         role="dialog"
         aria-modal="true"
         aria-labelledby="cart-drawer-heading"
@@ -173,7 +173,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           <button
             onClick={onClose}
             aria-label="Close cart drawer"
-            className="p-1.5 rounded-lg text-[#242820]/60 hover:text-[#234C35] hover:bg-black/5 transition-colors cursor-pointer"
+            className="p-1.5 rounded-md text-[#242820]/60 hover:text-[#234C35] hover:bg-black/5 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -219,7 +219,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       onClose();
                       onContinueShopping();
                     }}
-                    className="px-5 py-2.5 bg-[#234C35] text-white text-xs font-semibold rounded-lg hover:bg-[#1a3827] transition-all cursor-pointer"
+                    className="px-5 py-2.5 bg-[#234C35] text-white text-xs font-semibold rounded-md hover:bg-[#1a3827] transition-all cursor-pointer"
                   >
                     Browse Our Menu
                   </button>
@@ -227,13 +227,13 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               ) : (
                 <>
                   {/* Delivery vs Pickup Switcher */}
-                  <div className="bg-[#F7F1E4]/70 p-1 rounded-xl flex items-center gap-1 border border-[#234C35]/15">
+                  <div className="bg-[#F7F1E4]/70 p-1 rounded-md flex items-center gap-1 border border-[#234C35]/15">
                     <button
                       type="button"
                       onClick={() => setActiveOrderType('delivery')}
-                      className={`flex-1 py-2 px-3 text-xs font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-pointer ${
+                      className={`flex-1 py-2 px-3 text-xs font-semibold rounded-md flex items-center justify-center gap-2 transition-all cursor-pointer ${
                         activeOrderType === 'delivery'
-                          ? 'bg-[#234C35] text-white shadow-xs'
+                          ? 'bg-[#234C35] text-white '
                           : 'text-[#242820]/70 hover:text-[#234C35]'
                       }`}
                     >
@@ -243,9 +243,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     <button
                       type="button"
                       onClick={() => setActiveOrderType('pickup')}
-                      className={`flex-1 py-2 px-3 text-xs font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-pointer ${
+                      className={`flex-1 py-2 px-3 text-xs font-semibold rounded-md flex items-center justify-center gap-2 transition-all cursor-pointer ${
                         activeOrderType === 'pickup'
-                          ? 'bg-[#234C35] text-white shadow-xs'
+                          ? 'bg-[#234C35] text-white '
                           : 'text-[#242820]/70 hover:text-[#234C35]'
                       }`}
                     >
@@ -271,25 +271,25 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       return (
                         <div
                           key={item.product.id}
-                          className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-200/80 shadow-2xs"
+                          className="flex items-center gap-3 p-3 bg-white rounded-md border border-gray-200/80 "
                         >
                           <img
                             src={item.product.image}
                             alt={item.product.name}
-                            className="w-14 h-14 rounded-lg object-cover bg-gray-100 shrink-0"
+                            className="w-14 h-14 rounded-md object-cover bg-gray-100 shrink-0"
                             referrerPolicy="no-referrer"
                           />
                           <div className="flex-1 min-w-0">
                             <h4 className="font-serif font-bold text-sm text-[#242820] truncate">
                               {item.product.name}
                             </h4>
-                            <p className="text-xs font-mono font-medium text-[#234C35] tabular-nums mt-0.5">
+                            <p className="text-xs tabular-nums font-medium text-[#234C35] tabular-nums mt-0.5">
                               {formatINRPlain(item.product.pricePaise)} each
                             </p>
                           </div>
 
                           {/* Stepper */}
-                          <div className="flex items-center gap-1.5 bg-[#F7F1E4] rounded-lg p-1 shrink-0 border border-[#234C35]/10">
+                          <div className="flex items-center gap-1.5 bg-[#F7F1E4] rounded-md p-1 shrink-0 border border-[#234C35]/10">
                             <button
                               onClick={() =>
                                 updateCartQuantity(item.product.id, item.quantity - 1)
@@ -303,7 +303,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                                 <Minus className="w-3 h-3" />
                               )}
                             </button>
-                            <span className="w-4 text-center font-mono font-bold text-xs tabular-nums">
+                            <span className="w-4 text-center tabular-nums font-bold text-xs tabular-nums">
                               {item.quantity}
                             </span>
                             <button
@@ -318,7 +318,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                           </div>
 
                           <div className="text-right shrink-0 w-16">
-                            <span className="font-mono font-bold text-xs text-[#242820] tabular-nums">
+                            <span className="tabular-nums font-bold text-xs text-[#242820] tabular-nums">
                               {formatINRPlain(itemTotal)}
                             </span>
                           </div>
@@ -331,14 +331,14 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <div className="pt-4 border-t border-[#234C35]/10 space-y-2 text-xs">
                     <div className="flex justify-between text-[#242820]/70">
                       <span>Item Subtotal</span>
-                      <span className="font-mono tabular-nums">{formatINRPlain(cartSubtotalPaise)}</span>
+                      <span className="tabular-nums tabular-nums">{formatINRPlain(cartSubtotalPaise)}</span>
                     </div>
 
                     <div className="flex justify-between text-[#242820]/70">
                       <span>
                         {activeOrderType === 'delivery' ? 'Estimated Delivery Fee' : 'Pickup Fee'}
                       </span>
-                      <span className="font-mono tabular-nums">
+                      <span className="tabular-nums tabular-nums">
                         {deliveryFeePaise === 0 ? (
                           <span className="text-emerald-700 font-semibold">FREE</span>
                         ) : (
@@ -349,7 +349,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
                     <div className="pt-2 border-t border-gray-200 flex justify-between text-sm font-bold text-[#234C35]">
                       <span>Total Amount Payable</span>
-                      <span className="font-mono tabular-nums text-base">
+                      <span className="tabular-nums tabular-nums text-base">
                         {formatINRPlain(cartTotalPaise)}
                       </span>
                     </div>
@@ -362,27 +362,27 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           {/* STEP 2: CUSTOMER DETAILS FORM */}
           {step === 'details' && (
             <form id="order-form" onSubmit={handleProceedToWhatsApp} className="space-y-4">
-              <div className="p-3 bg-[#F7F1E4]/60 rounded-xl text-xs text-[#242820]/80 space-y-1 border border-[#234C35]/10">
+              <div className="p-3 bg-[#F7F1E4]/60 rounded-md text-xs text-[#242820]/80 space-y-1 border border-[#234C35]/10">
                 <div className="flex items-center justify-between font-bold text-[#234C35]">
                   <span>
                     {activeOrderType === 'delivery' ? 'Home Delivery Order' : 'Café Takeaway / Pickup'}
                   </span>
-                  <span className="font-mono tabular-nums">{formatINRPlain(cartTotalPaise)}</span>
+                  <span className="tabular-nums tabular-nums">{formatINRPlain(cartTotalPaise)}</span>
                 </div>
-                <p className="text-[11px] text-[#242820]/70">
+                <p className="text-xs text-[#242820]/70">
                   Please provide your contact details so our kitchen can prepare your meal accurately.
                 </p>
               </div>
 
               {serverError && (
-                <div className="p-2.5 bg-red-50 text-red-700 text-xs rounded-lg flex items-center gap-2 border border-red-200">
+                <div className="p-2.5 bg-red-50 text-red-700 text-xs rounded-md flex items-center gap-2 border border-red-200">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{serverError}</span>
                 </div>
               )}
 
               {errors.subtotal && (
-                <div className="p-2.5 bg-red-50 text-red-700 text-xs rounded-lg flex items-center gap-2 border border-red-200">
+                <div className="p-2.5 bg-red-50 text-red-700 text-xs rounded-md flex items-center gap-2 border border-red-200">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{errors.subtotal}</span>
                 </div>
@@ -398,11 +398,11 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Rahul Sharma"
-                  className={`w-full px-3.5 py-2.5 text-sm rounded-lg border ${
+                  className={`w-full px-3.5 py-2.5 text-sm rounded-md border ${
                     errors.name ? 'border-red-500 bg-red-50/30' : 'border-gray-300'
                   } focus:outline-hidden focus:ring-2 focus:ring-[#234C35]`}
                 />
-                {errors.name && <p className="text-[11px] text-red-600 mt-1">{errors.name}</p>}
+                {errors.name && <p className="text-xs text-red-600 mt-1">{errors.name}</p>}
               </div>
 
               <div>
@@ -424,7 +424,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     } focus:outline-hidden focus:ring-2 focus:ring-[#234C35]`}
                   />
                 </div>
-                {errors.phone && <p className="text-[11px] text-red-600 mt-1">{errors.phone}</p>}
+                {errors.phone && <p className="text-xs text-red-600 mt-1">{errors.phone}</p>}
               </div>
 
               {activeOrderType === 'delivery' && (
@@ -439,12 +439,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
                       placeholder="House / Flat No., Building Name, Street / Sector"
-                      className={`w-full px-3.5 py-2.5 text-sm rounded-lg border ${
+                      className={`w-full px-3.5 py-2.5 text-sm rounded-md border ${
                         errors.address ? 'border-red-500 bg-red-50/30' : 'border-gray-300'
                       } focus:outline-hidden focus:ring-2 focus:ring-[#234C35]`}
                     />
                     {errors.address && (
-                      <p className="text-[11px] text-red-600 mt-1">{errors.address}</p>
+                      <p className="text-xs text-red-600 mt-1">{errors.address}</p>
                     )}
                   </div>
 
@@ -457,7 +457,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       value={landmark}
                       onChange={(e) => setLandmark(e.target.value)}
                       placeholder="e.g. Near HDFC ATM / Metro Gate 2"
-                      className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                      className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                     />
                   </div>
                 </>
@@ -472,12 +472,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   value={instructions}
                   onChange={(e) => setInstructions(e.target.value)}
                   placeholder="e.g. Medium spicy, separate chutney, extra disposable spoons"
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
 
               {/* Mandatory Notice Required By Prompt */}
-              <div className="p-3 bg-amber-50/80 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-start gap-2">
+              <div className="p-3 bg-amber-50/80 border border-amber-200 rounded-md text-xs text-amber-900 flex items-start gap-2">
                 <AlertCircle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
                 <p>
                   <strong>Notice:</strong> Your order will be confirmed by our café team on WhatsApp. No advance online payment is required; cash/UPI on delivery or pickup.
@@ -488,7 +488,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white font-semibold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98 disabled:opacity-50"
+                className="w-full py-3.5 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white font-semibold rounded-md  transition-all flex items-center justify-center gap-2 cursor-pointer  disabled:opacity-50"
               >
                 <MessageCircle className="w-4 h-4 text-[#D98235]" />
                 <span className="text-sm">
@@ -514,7 +514,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               </div>
 
               <div>
-                <span className="text-xs font-mono font-bold text-[#D98235] uppercase tracking-wider">
+                <span className="text-xs tabular-nums font-bold text-[#D98235] uppercase tracking-wider">
                   Order Request Generated
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-[#234C35] mt-1">
@@ -527,7 +527,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       onClose();
                       onTrackOrder(submittedOrder.referenceId);
                     }}
-                    className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-[#F7F1E4]/70 border border-[#234C35]/20 text-[#234C35] text-xs font-semibold rounded-lg transition-colors cursor-pointer"
+                    className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-[#F7F1E4]/70 border border-[#234C35]/20 text-[#234C35] text-xs font-semibold rounded-md transition-colors cursor-pointer"
                   >
                     <PackageSearch className="w-3.5 h-3.5 text-[#D98235]" />
                     <span>Track this order</span>
@@ -539,10 +539,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               </div>
 
               {/* Order Snapshot Box */}
-              <div className="p-4 bg-[#F7F1E4]/60 rounded-xl text-left text-xs border border-[#234C35]/15 space-y-2">
+              <div className="p-4 bg-[#F7F1E4]/60 rounded-md text-left text-xs border border-[#234C35]/15 space-y-2">
                 <div className="flex justify-between font-bold text-[#242820]">
                   <span>Customer: {submittedOrder.customer.name}</span>
-                  <span className="font-mono">{formatINRPlain(submittedOrder.totalPaise)}</span>
+                  <span className="tabular-nums">{formatINRPlain(submittedOrder.totalPaise)}</span>
                 </div>
                 <p className="text-[#242820]/70">
                   {submittedOrder.items.length} item(s) •{' '}
@@ -556,7 +556,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   href={generatedWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer text-sm"
+                  className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-md  transition-all flex items-center justify-center gap-2 cursor-pointer text-sm"
                 >
                   <MessageCircle className="w-5 h-5 fill-white" />
                   <span>Send Order On WhatsApp</span>
@@ -567,14 +567,14 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <button
                   type="button"
                   onClick={handleCopyOrderMessage}
-                  className="w-full py-2.5 px-3 bg-gray-100 hover:bg-gray-200 text-[#242820] text-xs font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-2.5 px-3 bg-gray-100 hover:bg-gray-200 text-[#242820] text-xs font-semibold rounded-md transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Copy className="w-3.5 h-3.5" />
                   <span>{copiedLink ? 'Message Copied!' : 'Copy Order Text to Clipboard'}</span>
                 </button>
               </div>
 
-              <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-left text-xs text-emerald-900">
+              <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-md text-left text-xs text-emerald-900">
                 <p className="font-semibold">Next Step:</p>
                 <p className="mt-0.5 text-[#242820]/80">
                   Once sent, our café staff will reply immediately on WhatsApp to confirm preparation time and deliver your fresh food.
@@ -594,15 +594,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
         {/* Drawer Footer Actions */}
         {cart.length > 0 && step === 'review' && (
-          <div className="p-5 bg-white border-t border-[#234C35]/10 shrink-0 shadow-xs">
+          <div className="p-5 bg-white border-t border-[#234C35]/10 shrink-0 ">
             <div className="space-y-3">
               <button
                 onClick={() => setStep('details')}
-                className="w-full py-3.5 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white font-semibold rounded-xl shadow-md transition-all flex items-center justify-between cursor-pointer active:scale-98"
+                className="w-full py-3.5 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white font-semibold rounded-md  transition-all flex items-center justify-between cursor-pointer "
               >
                 <span className="text-sm">Proceed to Details</span>
                 <div className="flex items-center gap-2">
-                  <span className="font-mono tabular-nums text-sm font-bold text-[#F7F1E4]">
+                  <span className="tabular-nums tabular-nums text-sm font-bold text-[#F7F1E4]">
                     {formatINRPlain(cartTotalPaise)}
                   </span>
                   <ArrowRight className="w-4 h-4" />

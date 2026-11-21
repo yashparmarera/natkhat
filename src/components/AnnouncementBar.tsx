@@ -9,10 +9,10 @@ export const AnnouncementBar: React.FC = () => {
   if (isDismissed || !settings.announcementText) return null;
 
   return (
-    <div className="bg-[#234C35] text-[#F7F1E4] text-xs font-medium px-4 py-2 transition-all">
+    <div className="bg-[#234C35] text-[#F7F1E4] text-xs sm:text-sm font-medium px-4 py-2">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3 overflow-hidden text-ellipsis whitespace-nowrap">
-          <span className="inline-flex items-center gap-1.5 text-[#D98235] font-semibold uppercase tracking-wider text-[11px]">
+        <div className="flex items-center gap-3 overflow-hidden whitespace-nowrap min-w-0">
+          <span className="inline-flex items-center gap-1.5 text-[#D98235] font-semibold shrink-0">
             <Clock className="w-3.5 h-3.5" />
             {settings.openingHours}
           </span>
@@ -31,7 +31,7 @@ export const AnnouncementBar: React.FC = () => {
           <button
             onClick={() => setIsDismissed(true)}
             aria-label="Dismiss announcement"
-            className="text-white/60 hover:text-white transition-colors p-0.5 rounded"
+            className="text-white/80 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded focus-visible:outline-2 focus-visible:outline-[#D98235]"
           >
             <X className="w-3.5 h-3.5" />
           </button>

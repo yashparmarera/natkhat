@@ -12,7 +12,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-12">
       {/* About Section */}
-      <section className="bg-white rounded-2xl border border-[#234C35]/15 p-6 sm:p-10 shadow-xs space-y-6">
+      <section className="bg-white rounded-md border border-[#234C35]/15 p-6 sm:p-10  space-y-6">
         <div className="max-w-3xl space-y-3">
           <span className="text-xs font-semibold uppercase tracking-wider text-[#D98235]">
             Our Story & Craft
@@ -31,7 +31,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
         {/* 3 Ethos Pillars */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-[#234C35]/10">
           <div className="space-y-2">
-            <div className="w-10 h-10 rounded-lg bg-[#234C35]/10 flex items-center justify-center text-[#234C35]">
+            <div className="w-10 h-10 rounded-md bg-[#234C35]/10 flex items-center justify-center text-[#234C35]">
               <Coffee className="w-5 h-5 text-[#D98235]" />
             </div>
             <h3 className="font-serif font-bold text-base text-[#234C35]">Kulhad Chai & Tawa Hot</h3>
@@ -41,7 +41,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
           </div>
 
           <div className="space-y-2">
-            <div className="w-10 h-10 rounded-lg bg-[#234C35]/10 flex items-center justify-center text-[#234C35]">
+            <div className="w-10 h-10 rounded-md bg-[#234C35]/10 flex items-center justify-center text-[#234C35]">
               <Heart className="w-5 h-5 text-[#D98235]" />
             </div>
             <h3 className="font-serif font-bold text-base text-[#234C35]">Pure Desi Goodness</h3>
@@ -51,7 +51,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
           </div>
 
           <div className="space-y-2">
-            <div className="w-10 h-10 rounded-lg bg-[#234C35]/10 flex items-center justify-center text-[#234C35]">
+            <div className="w-10 h-10 rounded-md bg-[#234C35]/10 flex items-center justify-center text-[#234C35]">
               <ShieldCheck className="w-5 h-5 text-[#D98235]" />
             </div>
             <h3 className="font-serif font-bold text-base text-[#234C35]">FSSAI Certified Hygiene</h3>
@@ -65,7 +65,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
       {/* Location & Contact Information */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Contact Info Card */}
-        <div className="bg-white rounded-2xl border border-[#234C35]/15 p-6 sm:p-8 shadow-xs space-y-6">
+        <div className="bg-white rounded-md border border-[#234C35]/15 p-6 sm:p-8  space-y-6">
           <h2 className="font-serif text-2xl font-bold text-[#234C35]">Visit & Connect</h2>
 
           <div className="space-y-4 text-sm">
@@ -77,7 +77,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
                   {settings.address}
                 </p>
                 {settings.landmark && (
-                  <p className="text-[11px] text-[#242820]/60 mt-0.5">
+                  <p className="text-xs text-[#242820]/60 mt-0.5">
                     Landmark: {settings.landmark}
                   </p>
                 )}
@@ -89,7 +89,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
               <div>
                 <p className="font-semibold text-[#242820]">Operating Hours</p>
                 <p className="text-xs text-[#242820]/75 mt-0.5">{settings.openingHours}</p>
-                <p className="text-[11px] text-emerald-700 font-medium mt-0.5">
+                <p className="text-xs text-emerald-700 font-medium mt-0.5">
                   Open 7 Days a Week • Live Tawa Counter
                 </p>
               </div>
@@ -101,7 +101,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
                 <p className="font-semibold text-[#242820]">Direct Calling</p>
                 <a
                   href={`tel:${settings.contactPhone}`}
-                  className="text-xs font-mono text-[#234C35] font-bold hover:underline mt-0.5 block"
+                  className="text-xs tabular-nums text-[#234C35] font-bold hover:underline mt-0.5 block"
                 >
                   {settings.contactPhone}
                 </a>
@@ -131,7 +131,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-semibold rounded-lg shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-semibold rounded-md  transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
               <span>Chat on WhatsApp</span>
@@ -139,7 +139,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
 
             <button
               onClick={onExploreMenu}
-              className="px-4 py-2.5 bg-[#234C35] hover:bg-[#1a3827] text-white text-xs font-semibold rounded-lg shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2.5 bg-[#234C35] hover:bg-[#1a3827] text-white text-xs font-semibold rounded-md  transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <Utensils className="w-4 h-4" />
               <span>View Café Menu</span>
@@ -148,7 +148,7 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
         </div>
 
         {/* Delivery Areas & Services Card */}
-        <div className="bg-[#F7F1E4]/50 rounded-2xl border border-[#234C35]/15 p-6 sm:p-8 shadow-xs space-y-5 flex flex-col justify-between">
+        <div className="bg-[#F7F1E4]/50 rounded-md border border-[#234C35]/15 p-6 sm:p-8  space-y-5 flex flex-col justify-between">
           <div className="space-y-4">
             <h2 className="font-serif text-2xl font-bold text-[#234C35]">Delivery & Outlets</h2>
             <p className="text-xs text-[#242820]/75 leading-relaxed">
@@ -156,23 +156,23 @@ export const AboutContactView: React.FC<AboutContactViewProps> = ({ onExploreMen
             </p>
 
             <div className="space-y-2 text-xs">
-              <div className="p-3 bg-white rounded-lg border border-[#234C35]/10 space-y-1">
+              <div className="p-3 bg-white rounded-md border border-[#234C35]/10 space-y-1">
                 <span className="font-bold text-[#234C35]">🚀 Fast Neighbourhood Delivery</span>
-                <p className="text-[#242820]/70 text-[11px]">
+                <p className="text-[#242820]/70 text-xs">
                   Delivered in thermal heat-retaining bags to ensure your parathas stay crisp and chai stays steaming.
                 </p>
               </div>
 
-              <div className="p-3 bg-white rounded-lg border border-[#234C35]/10 space-y-1">
+              <div className="p-3 bg-white rounded-md border border-[#234C35]/10 space-y-1">
                 <span className="font-bold text-[#234C35]">🥡 Quick Takeaway Counter</span>
-                <p className="text-[#242820]/70 text-[11px]">
+                <p className="text-[#242820]/70 text-xs">
                   Place your order via WhatsApp 10-15 minutes prior to arriving; pick it up packaged and ready at the counter with zero wait time.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="text-[11px] text-[#242820]/60 border-t border-[#234C35]/10 pt-3">
+          <div className="text-xs text-[#242820]/60 border-t border-[#234C35]/10 pt-3">
             Note: As a standalone local café, all orders are personally packed and handed over by our own team.
           </div>
         </div>

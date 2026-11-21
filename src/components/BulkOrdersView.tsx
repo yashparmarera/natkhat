@@ -67,19 +67,19 @@ export const BulkOrdersView: React.FC = () => {
 
       {/* Target Audiences Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="p-4 bg-white rounded-xl border border-[#234C35]/10 shadow-2xs space-y-1.5">
+        <div className="p-4 bg-white rounded-md border border-[#234C35]/10  space-y-1.5">
           <h3 className="font-serif font-bold text-sm text-[#234C35]">Corporate & Offices</h3>
           <p className="text-xs text-[#242820]/70">
             Hygienically sealed executive thalis and afternoon snack platters with cutting chai flasks.
           </p>
         </div>
-        <div className="p-4 bg-white rounded-xl border border-[#234C35]/10 shadow-2xs space-y-1.5">
+        <div className="p-4 bg-white rounded-md border border-[#234C35]/10  space-y-1.5">
           <h3 className="font-serif font-bold text-sm text-[#234C35]">Industrial & Shifts</h3>
           <p className="text-xs text-[#242820]/70">
             Wholesome, filling meal combos with warm rotis, dal tadka, and seasonal subzis for factory teams.
           </p>
         </div>
-        <div className="p-4 bg-white rounded-xl border border-[#234C35]/10 shadow-2xs space-y-1.5">
+        <div className="p-4 bg-white rounded-md border border-[#234C35]/10  space-y-1.5">
           <h3 className="font-serif font-bold text-sm text-[#234C35]">Family & College Gatherings</h3>
           <p className="text-xs text-[#242820]/70">
             Samosas, chole bhature, chowmein, and sweet gulab jamuns for birthdays and student celebrations.
@@ -88,7 +88,7 @@ export const BulkOrdersView: React.FC = () => {
       </div>
 
       {/* Form Container */}
-      <div className="bg-white rounded-2xl border border-[#234C35]/15 p-6 sm:p-8 shadow-sm">
+      <div className="bg-white rounded-md border border-[#234C35]/15 p-6 sm:p-8 ">
         {submitted ? (
           <div className="text-center py-8 space-y-5">
             <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
@@ -108,7 +108,7 @@ export const BulkOrdersView: React.FC = () => {
                 href={generatedUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer text-sm"
+                className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-md  transition-all flex items-center justify-center gap-2 cursor-pointer text-sm"
               >
                 <MessageCircle className="w-5 h-5 fill-white" />
                 <span>Send Enquiry on WhatsApp</span>
@@ -136,7 +136,7 @@ export const BulkOrdersView: React.FC = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Vikramaditya Rathore"
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
 
@@ -150,7 +150,7 @@ export const BulkOrdersView: React.FC = () => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="10-digit mobile number"
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
             </div>
@@ -165,7 +165,7 @@ export const BulkOrdersView: React.FC = () => {
                   value={companyOrGroup}
                   onChange={(e) => setCompanyOrGroup(e.target.value)}
                   placeholder="e.g. Acme Tech / Department of Engineering"
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
 
@@ -176,7 +176,7 @@ export const BulkOrdersView: React.FC = () => {
                 <select
                   value={eventType}
                   onChange={(e) => setEventType(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 bg-white focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 bg-white focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 >
                   <option value="Corporate Office Lunch">Corporate Office Lunch</option>
                   <option value="Factory / Industrial Shift Meal">Factory / Industrial Shift Meal</option>
@@ -200,7 +200,7 @@ export const BulkOrdersView: React.FC = () => {
                   required
                   value={estimatedPeople}
                   onChange={(e) => setEstimatedPeople(Number(e.target.value))}
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
 
@@ -213,7 +213,7 @@ export const BulkOrdersView: React.FC = () => {
                   required
                   value={preferredDate}
                   onChange={(e) => setPreferredDate(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
 
@@ -226,7 +226,7 @@ export const BulkOrdersView: React.FC = () => {
                   value={preferredTime}
                   onChange={(e) => setPreferredTime(e.target.value)}
                   placeholder="e.g. 1:00 PM or 5:30 PM"
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
               </div>
             </div>
@@ -238,7 +238,7 @@ export const BulkOrdersView: React.FC = () => {
               <select
                 value={dietaryRequirements}
                 onChange={(e) => setDietaryRequirements(e.target.value)}
-                className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 bg-white focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 bg-white focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
               >
                 <option value="Pure Vegetarian (Standard)">Pure Vegetarian (Standard)</option>
                 <option value="Pure Vegetarian with Jain Options (No Onion/Garlic)">Pure Vegetarian with Jain Options (No Onion/Garlic)</option>
@@ -256,13 +256,13 @@ export const BulkOrdersView: React.FC = () => {
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="e.g. Need individual sealed food trays, paper napkins, disposable glasses"
-                className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                className="w-full px-3.5 py-2.5 text-sm rounded-md border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-3.5 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white font-semibold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+              className="w-full py-3.5 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white font-semibold rounded-md  transition-all flex items-center justify-center gap-2 cursor-pointer "
             >
               <MessageCircle className="w-5 h-5 text-[#D98235]" />
               <span>Connect on WhatsApp for Bulk Quote</span>

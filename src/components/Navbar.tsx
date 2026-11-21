@@ -31,8 +31,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#234C35]/10 transition-colors shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-8">
+    <header className="sticky top-0 z-40 bg-white border-b border-[#234C35]/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-3 sm:gap-8">
         {/* Zone 1: Brand Wordmark (Single text element) */}
         <button
           onClick={() => handleNavClick('home')}
@@ -42,19 +42,19 @@ export const Navbar: React.FC<NavbarProps> = ({
           <img
             src="/images/logo.png"
             alt={settings.cafeName}
-            className="h-12 md:h-14 w-auto object-contain whitespace-nowrap shrink-0 block"
+            className="h-10 sm:h-12 md:h-14 w-auto max-w-[9rem] sm:max-w-none object-contain block"
           />
         </button>
 
         {/* Zone 2: Clean 4–5 single-line navigation links */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-[#242820]/80">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-[#242820]">
           {navLinks.map((link) => {
             const isActive = currentView === link.id;
             return (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`transition-colors py-1 cursor-pointer whitespace-nowrap shrink-0 relative ${
+                className={`transition-colors py-2 cursor-pointer whitespace-nowrap shrink-0 relative focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235] ${
                   isActive
                     ? 'text-[#234C35] font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#D98235]'
                     : 'hover:text-[#234C35]'
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
           <button
             onClick={() => handleNavClick('admin')}
-            className={`transition-colors py-1 cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-1.5 text-xs text-[#242820]/60 hover:text-[#234C35] ${
+            className={`transition-colors py-1 cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-1.5 text-xs text-[#242820]/80 hover:text-[#234C35] ${
               currentView === 'admin' ? 'text-[#234C35] font-semibold' : ''
             }`}
           >
@@ -81,19 +81,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={openCart}
             aria-label="Shopping Cart"
             data-testid="cart-button"
-            className="flex items-center gap-2.5 px-4 py-2.5 bg-[#234C35] hover:bg-[#1a3827] text-white text-sm font-medium rounded-lg shadow-sm transition-all cursor-pointer whitespace-nowrap shrink-0 group active:scale-98"
+            className="flex items-center gap-2.5 min-h-11 px-4 bg-[#234C35] hover:bg-[#1a3827] text-white text-sm font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap shrink-0 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235]"
           >
             <div className="relative">
-              <ShoppingBag className="w-4 h-4 text-[#F7F1E4] group-hover:scale-105 transition-transform" />
+              <ShoppingBag className="w-4 h-4 text-[#F7F1E4] " />
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#D98235] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center tabular-nums">
+                <span className="absolute -top-2 -right-2 bg-[#D98235] text-white text-xs font-bold min-w-4 h-4 px-0.5 rounded-full flex items-center justify-center tabular-nums">
                   {cartItemCount}
                 </span>
               )}
             </div>
             <span className="font-semibold">Cart</span>
             {cartSubtotalPaise > 0 && (
-              <span className="hidden sm:inline border-l border-white/20 pl-2 text-xs font-mono tabular-nums text-[#F7F1E4]/90">
+              <span className="hidden sm:inline border-l border-white/20 pl-2 text-xs tabular-nums tabular-nums text-[#F7F1E4]/90">
                 {formatINRPlain(cartSubtotalPaise)}
               </span>
             )}
@@ -102,8 +102,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile Menu Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle navigation menu"
-            className="md:hidden p-2 text-[#242820] hover:text-[#234C35] rounded-lg hover:bg-black/5 transition-colors cursor-pointer"
+            aria-label="Toggle navigation menu" aria-expanded={mobileMenuOpen}
+            className="md:hidden w-11 h-11 flex items-center justify-center text-[#242820] hover:text-[#234C35] rounded-md hover:bg-black/5 transition-colors cursor-pointer"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -112,12 +112,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#234C35]/10 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg animate-in slide-in-from-top-2 duration-150">
+        <div className="md:hidden border-t border-[#234C35]/10 bg-white px-4 pt-3 pb-6 space-y-1">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => handleNavClick(link.id)}
-              className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+              className={`w-full text-left px-4 min-h-12 rounded-md text-base font-medium transition-colors ${
                 currentView === link.id
                   ? 'bg-[#234C35]/10 text-[#234C35] font-semibold'
                   : 'text-[#242820] hover:bg-black/5'
@@ -128,7 +128,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           ))}
           <button
             onClick={() => handleNavClick('admin')}
-            className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center gap-2 text-[#242820]/75 hover:bg-black/5 ${
+            className={`w-full text-left px-4 min-h-12 rounded-md text-base font-medium flex items-center gap-2 text-[#242820]/75 hover:bg-black/5 ${
               currentView === 'admin' ? 'bg-[#234C35]/10 text-[#234C35] font-semibold' : ''
             }`}
           >

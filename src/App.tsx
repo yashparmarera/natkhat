@@ -21,15 +21,7 @@ import { Product } from './types/cafe';
 import { formatINRPlain } from './utils/currency';
 import {
   Search,
-  Sparkles,
   ArrowRight,
-  Flame,
-  Award,
-  ShieldCheck,
-  Truck,
-  HeartHandshake,
-  CheckCircle,
-  MessageCircle,
 } from 'lucide-react';
 
 function CafeApp() {
@@ -90,7 +82,7 @@ function CafeApp() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F1E4]/30 text-[#242820]">
+    <div className="min-h-screen flex flex-col bg-[#FBF7EC] text-[#242820]">
       {/* 1. Announcement Bar */}
       <AnnouncementBar />
 
@@ -105,7 +97,7 @@ function CafeApp() {
       <main className="flex-1">
         {/* VIEW A: HOMEPAGE */}
         {currentView === 'home' && (
-          <div className="space-y-16 sm:space-y-20 pb-12">
+          <div className="space-y-10 sm:space-y-12 pb-12">
             {/* Hero Section */}
             <Hero
               onExploreMenu={() => {
@@ -117,89 +109,67 @@ function CafeApp() {
             />
 
             {/* Food Categories Quick Navigation */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div>
-                  <span className="text-xs font-semibold text-[#D98235] uppercase tracking-wider">
-                    Handcrafted Menu
-                  </span>
-                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#234C35] mt-0.5">
-                    Explore Food Categories
-                  </h2>
-                </div>
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+              <div className="flex items-end justify-between gap-4 border-b border-[#234C35]/20 pb-3">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#234C35]">
+                  Browse the menu
+                </h2>
                 <button
                   onClick={() => {
                     setSelectedCategory('all');
                     setCurrentView('menu');
                   }}
-                  className="text-xs font-semibold text-[#234C35] hover:underline flex items-center gap-1 cursor-pointer self-start sm:self-auto"
+                  className="min-h-11 text-sm font-semibold text-[#234C35] underline underline-offset-4 decoration-[#D98235] flex items-center gap-1 cursor-pointer"
                 >
                   <span>View all dishes</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </button>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#234C35]/20">
                 {categories.map((cat) => {
                   const count = productsCountByCategory[cat.id] || 0;
                   return (
-                    <div
-                      key={cat.id}
-                      onClick={() => handleCategorySelectFromHome(cat.id)}
-                      className="group p-4 bg-white rounded-xl border border-[#234C35]/10 shadow-2xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
-                    >
-                      <div className="space-y-1.5">
-                        <div className="flex items-center justify-between">
-                          <h3 className="font-serif font-bold text-sm text-[#242820] group-hover:text-[#234C35] transition-colors">
+                    <li key={cat.id} className="border-r border-b border-[#234C35]/20">
+                      <button
+                        onClick={() => handleCategorySelectFromHome(cat.id)}
+                        className="group w-full h-full text-left p-4 min-h-11 bg-white hover:bg-[#F7F1E4] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D98235]"
+                      >
+                        <span className="flex items-baseline justify-between gap-2">
+                          <span className="font-serif font-bold text-base text-[#242820] group-hover:text-[#234C35]">
                             {cat.name}
-                          </h3>
-                          <span className="text-[10px] font-mono font-bold bg-[#F7F1E4] text-[#234C35] px-2 py-0.5 rounded-full">
-                            {count}
                           </span>
-                        </div>
-                        <p className="text-xs text-[#242820]/65 line-clamp-2 leading-relaxed">
+                          <span className="text-sm tabular-nums text-[#B8651C] font-semibold">{count}</span>
+                        </span>
+                        <span className="block text-sm text-[#242820]/80 line-clamp-2 mt-1">
                           {cat.description}
-                        </p>
-                      </div>
-
-                      <div className="pt-3 flex items-center gap-1 text-[11px] font-semibold text-[#D98235] group-hover:translate-x-1 transition-transform">
-                        <span>Browse Items</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </div>
-                    </div>
+                        </span>
+                      </button>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </section>
 
             {/* Featured & Popular Dishes */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <Flame className="w-4 h-4 text-[#D98235]" />
-                    <span className="text-xs font-semibold text-[#D98235] uppercase tracking-wider">
-                      Chef Specials
-                    </span>
-                  </div>
-                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#234C35] mt-0.5">
-                    Popular Dishes
-                  </h2>
-                </div>
-
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+              <div className="flex items-end justify-between gap-4 border-b border-[#234C35]/20 pb-3">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#234C35]">
+                  Popular dishes
+                </h2>
                 <button
                   onClick={() => {
                     setSelectedCategory('all');
                     setCurrentView('menu');
                   }}
-                  className="text-xs font-semibold text-[#234C35] hover:underline flex items-center gap-1 cursor-pointer"
+                  className="min-h-11 text-sm font-semibold text-[#234C35] underline underline-offset-4 decoration-[#D98235] flex items-center gap-1 cursor-pointer"
                 >
-                  <span>See Full Menu</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>See full menu</span>
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {featuredProducts.slice(0, 8).map((product) => (
                   <ProductCard
                     key={product.id}
@@ -210,100 +180,62 @@ function CafeApp() {
               </div>
             </section>
 
-            {/* Promotional Offer Banner (Dynamically Managed) */}
+            {/* Delivery / lunch offer (threshold comes from store settings) */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-[#234C35] text-white rounded-2xl p-6 sm:p-10 shadow-md relative overflow-hidden">
-                <div className="max-w-2xl space-y-3 relative z-10">
-                  <span className="px-2.5 py-1 bg-[#D98235] text-white text-[11px] font-bold uppercase tracking-wider rounded-md">
-                    Limited Period Offer
-                  </span>
+              <div className="bg-[#234C35] text-white rounded-md p-6 sm:p-10 grid md:grid-cols-12 gap-6 items-center">
+                <div className="md:col-span-8 space-y-3">
                   <h3 className="font-serif text-2xl sm:text-3xl font-bold">
-                    Enjoy Free Neighbourhood Delivery on Orders Above{' '}
-                    {formatINRPlain(settings.freeDeliveryThresholdPaise)}
+                    Free delivery on orders above {formatINRPlain(settings.freeDeliveryThresholdPaise)}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#F7F1E4]/80 leading-relaxed">
-                    Order your favourite kulhad chai flasks, breakfast parathas, and lunch thalis directly. No middleman commissions, straight from our pan to your table.
+                  <p className="text-sm sm:text-base text-[#F7F1E4] leading-relaxed">
+                    Kulhad chai, breakfast parathas and lunch thalis, ordered straight from the kitchen with no middleman commission.
                   </p>
-                  <div className="pt-2">
-                    <button
-                      onClick={() => {
-                        setSelectedCategory('all');
-                        setCurrentView('menu');
-                      }}
-                      className="px-5 py-2.5 bg-[#F7F1E4] hover:bg-white text-[#234C35] text-xs font-bold rounded-lg shadow-sm transition-colors cursor-pointer"
-                    >
-                      Order Now
-                    </button>
-                  </div>
                 </div>
-
-                <div className="absolute -bottom-8 -right-8 w-60 h-60 bg-white/5 rounded-full blur-2xl pointer-events-none" />
+                <div className="md:col-span-4 md:text-right">
+                  <button
+                    onClick={() => {
+                      setSelectedCategory('all');
+                      setCurrentView('menu');
+                    }}
+                    className="min-h-12 px-6 bg-[#F7F1E4] hover:bg-white text-[#234C35] text-base font-semibold rounded-md transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235]"
+                  >
+                    Order now
+                  </button>
+                </div>
               </div>
             </section>
 
-            {/* Why Choose Us */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-              <div className="text-center space-y-2">
-                <span className="text-xs font-semibold text-[#D98235] uppercase tracking-wider">
-                  Our Promise
-                </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#234C35]">
-                  Why Locals Love {settings.cafeName}
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="p-6 bg-white rounded-2xl border border-[#234C35]/10 shadow-2xs space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#234C35]/10 text-[#234C35] flex items-center justify-center">
-                    <Flame className="w-5 h-5 text-[#D98235]" />
-                  </div>
-                  <h3 className="font-serif font-bold text-lg text-[#234C35]">
-                    Piped Live on Tawa
-                  </h3>
-                  <p className="text-xs text-[#242820]/75 leading-relaxed">
-                    We never serve pre-made cold parathas or re-heated tea. Every order is fired live on our tawa with real Desi Ghee and served steaming hot.
-                  </p>
-                </div>
-
-                <div className="p-6 bg-white rounded-2xl border border-[#234C35]/10 shadow-2xs space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#234C35]/10 text-[#234C35] flex items-center justify-center">
-                    <Award className="w-5 h-5 text-[#D98235]" />
-                  </div>
-                  <h3 className="font-serif font-bold text-lg text-[#234C35]">
-                    100% Amul Butter & Pure Paneer
-                  </h3>
-                  <p className="text-xs text-[#242820]/75 leading-relaxed">
-                    Zero palm oil or artificial substitutes. We strictly use genuine Amul dairy butter, pure cow ghee, and fresh malai paneer in all our recipes.
-                  </p>
-                </div>
-
-                <div className="p-6 bg-white rounded-2xl border border-[#234C35]/10 shadow-2xs space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#234C35]/10 text-[#234C35] flex items-center justify-center">
-                    <MessageCircle className="w-5 h-5 text-[#25D366]" />
-                  </div>
-                  <h3 className="font-serif font-bold text-lg text-[#234C35]">
-                    Simple WhatsApp Handoff
-                  </h3>
-                  <p className="text-xs text-[#242820]/75 leading-relaxed">
-                    No complicated logins, no hidden app service fees, and no payment gateways. Customise your meal in 30 seconds and send it to our kitchen on WhatsApp.
-                  </p>
-                </div>
-              </div>
+            {/* Why us: editorial list instead of icon cards */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8">
+              <h2 className="lg:col-span-4 font-serif text-2xl sm:text-3xl font-bold text-[#234C35]">
+                Why locals choose {settings.cafeName}
+              </h2>
+              <ol className="lg:col-span-8 divide-y divide-[#234C35]/20 border-y border-[#234C35]/20">
+                {[
+                  ['Fired live on the tawa', 'No pre-made cold parathas or re-heated tea. Every order is cooked when you place it, with real desi ghee.'],
+                  ['Amul butter and fresh paneer', 'No palm oil or substitutes. We use Amul butter, pure cow ghee and malai paneer in our recipes.'],
+                  ['Order on WhatsApp', 'No login, no app, no payment gateway. Build your basket, send it to our kitchen, and we confirm it.'],
+                ].map(([title, body], i) => (
+                  <li key={title} className="py-5 flex gap-5">
+                    <span className="font-serif text-2xl font-bold text-[#B8651C] tabular-nums w-8 shrink-0">{i + 1}</span>
+                    <div>
+                      <h3 className="font-serif font-bold text-lg text-[#234C35]">{title}</h3>
+                      <p className="text-sm sm:text-base text-[#242820]/90 leading-relaxed mt-1">{body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </section>
 
             {/* Bulk Order Section Teaser */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-gradient-to-r from-[#F7F1E4] to-[#F7F1E4]/60 border border-[#234C35]/15 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+              <div className="border border-[#234C35]/30 bg-[#F7F1E4] rounded-md p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                 <div className="space-y-2 max-w-xl">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-[#D98235]">
-                    <HeartHandshake className="w-4 h-4" />
-                    <span>Office & Group Catering</span>
-                  </div>
                   <h3 className="font-serif text-2xl font-bold text-[#234C35]">
-                    Planning an Event, Office Lunch, or Shift Meal?
+                    Office lunch, event or shift meal for 10 to 500 people
                   </h3>
-                  <p className="text-xs text-[#242820]/75">
-                    We prepare packaged thali boxes, bulk chai flasks, and snack platters for 10 to 500 people. Direct kitchen rates with guaranteed punctual delivery.
+                  <p className="text-sm sm:text-base text-[#242820]/90">
+                    Packed thali boxes, chai flasks and snack platters at direct kitchen rates, delivered on time.
                   </p>
                 </div>
                 <button
@@ -311,15 +243,14 @@ function CafeApp() {
                     setCurrentView('bulk-orders');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="px-6 py-3 bg-[#234C35] hover:bg-[#1a3827] text-white text-xs font-bold rounded-xl shadow-xs transition-colors whitespace-nowrap cursor-pointer shrink-0"
+                  className="min-h-12 px-6 bg-[#234C35] hover:bg-[#1a3827] text-white text-base font-semibold rounded-md transition-colors cursor-pointer shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D98235]"
                 >
-                  Enquire for Bulk Catering
+                  Enquire for bulk catering
                 </button>
               </div>
             </section>
           </div>
         )}
-
         {/* VIEW B: MENU & ORDERING */}
         {currentView === 'menu' && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
@@ -327,27 +258,27 @@ function CafeApp() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <h1 className="font-serif text-3xl font-bold text-[#234C35]">
-                  Café Menu & Online Ordering
+                  Menu and online ordering
                 </h1>
-                <p className="text-xs text-[#242820]/70 mt-0.5">
+                <p className="text-sm text-[#242820]/80 mt-0.5">
                   Select your dishes, add them to your basket, and place your order directly via WhatsApp.
                 </p>
               </div>
 
               {/* Search Bar */}
               <div className="relative w-full md:w-80">
-                <Search className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
+                <Search className="w-4 h-4 text-gray-500 absolute left-3 top-3.5" aria-hidden="true" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search chai, parathas, thali..."
-                  className="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-gray-300 bg-white shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
+                  className="w-full pl-9 pr-16 min-h-11 text-base rounded-md border border-[#234C35]/40 bg-white focus:outline-hidden focus:ring-2 focus:ring-[#234C35]"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-3 top-2.5 text-xs text-gray-400 hover:text-gray-600"
+                    className="absolute right-1 top-0 min-h-11 px-2 text-sm text-gray-600 hover:text-gray-900"
                   >
                     Clear
                   </button>
@@ -356,7 +287,7 @@ function CafeApp() {
             </div>
 
             {/* Category Navigation Bar */}
-            <div className="sticky top-18 z-20 bg-[#F7F1E4]/90 backdrop-blur-xs py-2 border-y border-[#234C35]/10">
+            <div className="sticky top-18 z-20 bg-[#F7F1E4] py-1 border-y border-[#234C35]/10">
               <CategoryNav
                 categories={categories}
                 selectedCategory={selectedCategory}
@@ -368,11 +299,11 @@ function CafeApp() {
 
             {/* Product Grid */}
             {filteredProducts.length === 0 ? (
-              <div className="py-16 text-center space-y-3 bg-white rounded-2xl border border-gray-200">
+              <div className="py-16 text-center space-y-3 bg-white rounded-md border border-[#234C35]/20">
                 <p className="text-base font-semibold text-[#242820]">
                   No dishes match your search or filter
                 </p>
-                <p className="text-xs text-[#242820]/60">
+                <p className="text-sm text-[#242820]/75">
                   Try searching for a different item or select 'All Delicacies'.
                 </p>
                 <button
@@ -380,13 +311,13 @@ function CafeApp() {
                     setSearchQuery('');
                     setSelectedCategory('all');
                   }}
-                  className="px-4 py-2 bg-[#234C35] text-white text-xs font-semibold rounded-lg hover:bg-[#1a3827] cursor-pointer"
+                  className="min-h-11 px-4 bg-[#234C35] text-white text-sm font-semibold rounded-md hover:bg-[#1a3827] cursor-pointer"
                 >
                   Reset Menu Filter
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {filteredProducts.map((product) => (
                   <ProductCard
                     key={product.id}
