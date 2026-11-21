@@ -19,6 +19,7 @@
  * --strict        exit 1 when the audit finds a violation (use for "after"; "before" is report-only)
  * --allow "A,B"   font families (as the browser reports them) that may render text.
  *                 Default: Montserrat,Source Sans 3
+ * --merge         with --only: re-run a few scenes and fold them into the existing manifest/audit of that folder
  * --no-audit      screenshots only
  * --inject-link URL / --inject-css FILE   preview a candidate type system on the CURRENT code (no source edits)
  * --verbose       phase timing
@@ -70,6 +71,7 @@ const INJECT_CSS = opt('--inject-css', '') ? fs.readFileSync(path.resolve(opt('-
 const STRICT = flag('--strict');
 const AUDIT = !flag('--no-audit');
 const VERBOSE = flag('--verbose');
+const MERGE = flag('--merge'); // keep the other scenes already in the output folder (use with --only to re-run a few)
 const T0 = Date.now();
 const tick = (m) => { if (VERBOSE) console.log('      [' + ((Date.now() - T0) / 1000).toFixed(1) + 's] ' + m); };
 const ALLOWED_FAMILIES = opt('--allow', process.env.CAPTURE_ALLOW_FAMILIES || 'Montserrat,Source Sans 3')
@@ -321,7 +323,15 @@ async function auditPage(page, context, vp, sceneId) {
     };
     const census = {};
     const samples = {};
-    const issues = { belowMinSize: [], inputsBelow16: [], italic: [], longUppercase: [], tightCaps: [], wideTracking: [], clipped: [], truncated: [], headingTruncated: [], priceNoTabular: [], headingLeading: [], paragraphLeading: [], smallParagraph: [], longParagraphMobile: [], roleMismatch: [] };
+    const issues = { belowMinSize: [], inputsBelow16: [], italic: [], longUppercase: [], tightCaps: [], wideTracking: [], clipped: [], truncated: [], headingTruncated: [], priceNoTabular: [], headingLeading: [], paragraphLeading: [], smallParagraph: [], longParagraphMobile: [], roleMismatch: [], logoSqueezed: [] };
+    // The header logo is an image (public/images/logo.png). When the nav gets wider than the room it has, flexbox squeezes the logo
+    // to a few pixels instead of overflowing, so a plain "page overflow" check misses it.
+    for (const img of document.querySelectorAll('header img')) {
+      const r = img.getBoundingClientRect();
+      if (!img.naturalWidth || !r.height) continue;
+      const nat = img.naturalWidth / img.naturalHeight;
+      if (Math.abs(r.width / r.height - nat) / nat > 0.15) issues.logoSqueezed.push({ el: 'header img', boxW: Math.round(r.width), boxH: Math.round(r.height), naturalAspect: Number(nat.toFixed(2)) });
+    }
     let devanagari = 0;
     let rupeeNodes = 0;
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -469,6 +479,7 @@ function judge(audit) {
   if (audit.viewport <= 480 && I.inputsBelow16.count) v.push(`${I.inputsBelow16.count} form control(s) below 16px on mobile`);
   if (audit.pageOverflowX > 1) v.push(`page overflows horizontally by ${audit.pageOverflowX}px`);
   if (I.roleMismatch.count) v.push(`${I.roleMismatch.count} element(s) in the wrong family for their role (headings/buttons = display, labels/cells/inputs = text face)`);
+  if (I.logoSqueezed.count) v.push(`the header logo is squeezed to ${I.logoSqueezed.samples[0].boxW}x${I.logoSqueezed.samples[0].boxH}px (nav is too wide for this viewport)`);
   if (I.clipped.count) v.push(`${I.clipped.count} element(s) clip their text`);
   if (I.headingTruncated.count) v.push(`${I.headingTruncated.count} heading/title(s) cut off with an ellipsis (dish and category names must stay readable)`);
   return v;
@@ -521,6 +532,7 @@ async function main() {
     for (const kind of ['public', 'admin']) {
       const scenes = SCENES.filter((s) => s.ctx === kind && (!ONLY || ONLY.includes(s.id)) && (!s.maxWidth || vp.width <= s.maxWidth));
       for (const scene of scenes) {
+       for (let attempt = 1; attempt <= 2; attempt++) { // one retry: the dev server occasionally stalls while it recompiles
         // fresh context per scene: no state leaks between scenes (the cart lives in localStorage)
         const context = await browser.newContext({
           viewport: { width: vp.width, height: vp.height },
@@ -591,12 +603,35 @@ async function main() {
           console.log(`  FAIL ${record.file}: ${record.error}`);
           try { await page.screenshot({ path: path.join(OUT_DIR, `_failed-${record.file}`) }); } catch {}
         }
-        manifest.scenes.push(record);
         await context.close();
+        if (!record.ok && attempt < 2) { console.log(`  retry ${record.file}`); continue; }
+        manifest.scenes.push(record);
+        break;
+       }
       }
     }
   }
   await browser.close();
+
+  if (MERGE) {
+    // Fold this run into the existing folder: scenes that were re-run replace their old entries, everything else is kept.
+    const readJson = (f) => { try { return JSON.parse(fs.readFileSync(path.join(OUT_DIR, f), 'utf8')); } catch { return null; } };
+    const keyOf = (s) => `${s.id || s.scene}@${s.viewport}`;
+    const rerun = new Set(manifest.scenes.map(keyOf));
+    const prevManifest = readJson('manifest.json');
+    const prevAudit = readJson('typography-audit.json');
+    if (prevManifest) {
+      manifest.scenes = [...prevManifest.scenes.filter((s) => !rerun.has(keyOf(s))), ...manifest.scenes];
+      manifest.fontRequests = [...prevManifest.fontRequests.filter((r) => !rerun.has(`${r.scene}@${r.viewport}`)), ...manifest.fontRequests];
+      manifest.consoleProblems = [...prevManifest.consoleProblems.filter((r) => !rerun.has(`${r.scene}@${r.viewport}`)), ...manifest.consoleProblems];
+      manifest.startedAt = prevManifest.startedAt;
+      manifest.viewports = [...new Set([...(prevManifest.viewports || []), ...VIEWPORT_WIDTHS])];
+    }
+    if (prevAudit) {
+      audits.splice(0, audits.length, ...prevAudit.audits.filter((a) => !rerun.has(keyOf(a))), ...audits);
+      failures.splice(0, failures.length, ...prevAudit.failures.filter((f) => !rerun.has(keyOf(f))), ...failures);
+    }
+  }
 
   manifest.finishedAt = new Date().toISOString();
   // Font weight on the wire: unique files per scene (what one page load downloads).
